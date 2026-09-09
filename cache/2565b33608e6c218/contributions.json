@@ -1,0 +1,66 @@
+[
+  {
+    "channel": "Online_Video",
+    "mean": 484088.8112580069,
+    "ci_lower": 89625.9263924525,
+    "ci_upper": 1329724.4831119261,
+    "pct_of_total_mean": 0.1229029820855231,
+    "ci_level": 0.9
+  },
+  {
+    "channel": "Display",
+    "mean": 19355162.424341585,
+    "ci_lower": 774440.0733714446,
+    "ci_upper": 33791784.23079007,
+    "pct_of_total_mean": 4.913989180042008,
+    "ci_level": 0.9
+  },
+  {
+    "channel": "Paid_Social",
+    "mean": 25083995.03388023,
+    "ci_lower": 14680056.054405434,
+    "ci_upper": 40271856.389359385,
+    "pct_of_total_mean": 6.368454962366869,
+    "ci_level": 0.9
+  },
+  {
+    "channel": "Paid_Search",
+    "mean": 46755743.36598379,
+    "ci_lower": 514948.1305569309,
+    "ci_upper": 112907771.86993687,
+    "pct_of_total_mean": 11.870591006579012,
+    "ci_level": 0.9
+  },
+  {
+    "channel": "Affiliate",
+    "mean": 51903638.14149965,
+    "ci_lower": 46139727.606538735,
+    "ci_upper": 57977403.7790839,
+    "pct_of_total_mean": 13.177565273819773,
+    "ci_level": 0.9
+  },
+  {
+    "channel": "CTV",
+    "mean": 2053546.850431592,
+    "ci_lower": 357557.94118758116,
+    "ci_upper": 5416358.928753589,
+    "pct_of_total_mean": 0.5213651418930658,
+    "ci_level": 0.9
+  },
+  {
+    "channel": "Linear_TV",
+    "mean": 4963865.851507915,
+    "ci_lower": 1460115.5808519206,
+    "ci_upper": 9200395.925788166,
+    "pct_of_total_mean": 1.2602520480434394,
+    "ci_level": 0.9
+  },
+  {
+    "channel": "Email_Opens",
+    "mean": 1992952.3218063586,
+    "ci_lower": 37724.61414207678,
+    "ci_upper": 6722298.284691622,
+    "pct_of_total_mean": 0.5059810881968969,
+    "ci_level": 0.9
+  }
+]

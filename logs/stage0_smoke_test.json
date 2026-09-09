@@ -1,0 +1,17 @@
+{
+  "stage": "Stage 0 \u2014 Smoke Test",
+  "timestamp_utc": "2026-09-09T09:15:50.707561+00:00",
+  "model_path": "Meridian_files/model_build/meridian_model.binpb",
+  "model_exists": true,
+  "model_size_bytes": 2401510,
+  "status": "PASS",
+  "dimensions": {
+    "n_geos": 6,
+    "n_media_channels": 5,
+    "n_rf_channels": 2,
+    "n_times": 104,
+    "n_organic_media_channels": 1,
+    "n_controls": 3
+  },
+  "error": null
+}

@@ -1,0 +1,56 @@
+{
+  "stage": "Stage 0 \u2014 Spec Extraction",
+  "timestamp_utc": "2026-09-09T09:16:19.033027+00:00",
+  "model_path": "Meridian_files/model_build/meridian_model.binpb",
+  "spec_path": "/home/bhush/genai/recco/causal_mmm/Meridian_files/meridian_application/meridian-app/config/model_spec.json",
+  "status": "PASS",
+  "spec": {
+    "n_geos": 6,
+    "geo_names": [
+      "Bengaluru",
+      "Chennai",
+      "Delhi",
+      "Hyderabad",
+      "Mumbai",
+      "Pune"
+    ],
+    "n_times": 104,
+    "date_start": "2024-01-01",
+    "date_end": "2025-12-22",
+    "time_granularity": "weekly",
+    "n_media_channels": 5,
+    "media_channel_names": [
+      "Online_Video",
+      "Display",
+      "Paid_Social",
+      "Paid_Search",
+      "Affiliate"
+    ],
+    "n_rf_channels": 2,
+    "rf_channel_names": [
+      "CTV",
+      "Linear_TV"
+    ],
+    "n_organic_media_channels": 1,
+    "organic_media_channel_names": [
+      "Email_Opens"
+    ],
+    "n_controls": 3,
+    "control_names": [
+      "Total_Markdowns",
+      "Competitor_Spend",
+      "Inflation_Rate"
+    ],
+    "kpi_name": "Salon_Bookings",
+    "kpi_type": "non_revenue",
+    "kpi_units": "bookings",
+    "revenue_per_kpi_col": "Avg_Revenue_Per_Booking",
+    "mcmc_n_chains": 2,
+    "mcmc_n_draws": 400,
+    "max_lag": 8,
+    "hill_before_adstock": false,
+    "media_effects_dist": "log_normal",
+    "enable_aks": true
+  },
+  "error": null
+}

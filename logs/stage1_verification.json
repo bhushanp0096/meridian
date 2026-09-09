@@ -1,0 +1,70 @@
+{
+  "stage": "Stage 1 \u2014 Analysis Service Layer Verification",
+  "timestamp_utc": "2026-09-09T09:36:19.908446+00:00",
+  "overall_status": "PASS",
+  "tests": [
+    {
+      "test": "loader.get_model",
+      "status": "PASS",
+      "detail": "model loaded in 11.9s",
+      "duration_seconds": 11.91
+    },
+    {
+      "test": "loader.model_info",
+      "status": "PASS",
+      "detail": "{'loaded': True, 'model_path': 'Meridian_files/model_build/meridian_model.binpb', 'n_geos': 6, 'n_media_channels': 5, 'n_rf_channels': 2}",
+      "duration_seconds": 0.0
+    },
+    {
+      "test": "analysis.get_roi_summary",
+      "status": "PASS",
+      "detail": "7 channels, ROI range [1.30, 977.28]",
+      "duration_seconds": 3.33
+    },
+    {
+      "test": "analysis.get_channel_contributions",
+      "status": "PASS",
+      "detail": "8 channels",
+      "duration_seconds": 1.52
+    },
+    {
+      "test": "analysis.get_response_curves(Online_Video)",
+      "status": "PASS",
+      "detail": "41 points, outcome range [0.0, 838958.9]",
+      "duration_seconds": 4.47
+    },
+    {
+      "test": "analysis.get_response_curves_all_channels",
+      "status": "PASS",
+      "detail": "7 channels \u00d7 41 points each",
+      "duration_seconds": 4.69
+    },
+    {
+      "test": "analysis.get_baseline_vs_media",
+      "status": "PASS",
+      "detail": "104 time periods",
+      "duration_seconds": 0.45
+    },
+    {
+      "test": "analysis.get_predictive_accuracy",
+      "status": "PASS",
+      "detail": "{'r_squared': None, 'mape': None, 'wmape': None}",
+      "duration_seconds": 0.82
+    },
+    {
+      "test": "optimizer.get_current_spend_summary",
+      "status": "PASS",
+      "detail": "7 channels, total spend = 4185397",
+      "duration_seconds": 0.08
+    }
+  ],
+  "error": null,
+  "model_spec": {
+    "n_media_channels": 5,
+    "n_rf_channels": 2,
+    "n_times": 104
+  },
+  "n_pass": 9,
+  "n_fail": 0,
+  "completed_utc": "2026-09-09T09:36:47.185656+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "status": "ok",
+  "budget_type": "fixed",
+  "total_budget": 5000000.0,
+  "total_optimized_spend": 5000000.0,
+  "spend_constraint_lower": 0.25,
+  "spend_constraint_upper": 0.25,
+  "use_optimal_frequency": true,
+  "ci_level": 0.9,
+  "n_flagged_channels": 0,
+  "channels": []
+}

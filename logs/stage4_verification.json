@@ -1,0 +1,82 @@
+{
+  "stage": "Stage 4 \u2014 API Layer (FastAPI) Verification",
+  "timestamp_utc": "2026-09-09T11:11:03.408109+00:00",
+  "overall_status": "PASS",
+  "n_pass": 12,
+  "n_fail": 0,
+  "tests": [
+    {
+      "test": "api.openapi_schema",
+      "status": "PASS",
+      "detail": "All 12 endpoints registered in OpenAPI",
+      "duration_seconds": 0.0816
+    },
+    {
+      "test": "api.get_health",
+      "status": "PASS",
+      "detail": "Status: healthy",
+      "duration_seconds": 0.0034
+    },
+    {
+      "test": "api.get_model_spec",
+      "status": "PASS",
+      "detail": "KPI: Salon_Bookings, 6 geos",
+      "duration_seconds": 0.0027
+    },
+    {
+      "test": "api.get_model_info",
+      "status": "PASS",
+      "detail": "Loaded=True",
+      "duration_seconds": 0.0022
+    },
+    {
+      "test": "api.get_contributions",
+      "status": "PASS",
+      "detail": "X-Cache=HIT, 8 channels",
+      "duration_seconds": 0.0022
+    },
+    {
+      "test": "api.get_roi_summary",
+      "status": "PASS",
+      "detail": "X-Cache=HIT, 7 channels",
+      "duration_seconds": 0.0035
+    },
+    {
+      "test": "api.get_response_curves",
+      "status": "PASS",
+      "detail": "All curves (7 ch) & single curve (41 pts) verified",
+      "duration_seconds": 5.4926
+    },
+    {
+      "test": "api.get_baseline_vs_media",
+      "status": "PASS",
+      "detail": "X-Cache=HIT, 104 periods",
+      "duration_seconds": 0.0035
+    },
+    {
+      "test": "api.get_accuracy",
+      "status": "PASS",
+      "detail": "Goodness-of-fit model validated",
+      "duration_seconds": 0.002
+    },
+    {
+      "test": "api.get_spend_summary",
+      "status": "PASS",
+      "detail": "7 channels",
+      "duration_seconds": 0.0027
+    },
+    {
+      "test": "api.post_optimize_cache_hit",
+      "status": "PASS",
+      "detail": "X-Cache=HIT in 3.42ms (instant cached serve)",
+      "duration_seconds": 0.0034
+    },
+    {
+      "test": "api.post_whatif",
+      "status": "PASS",
+      "detail": "Simulated 7 channels with CPM/spend multipliers",
+      "duration_seconds": 0.005
+    }
+  ],
+  "completed_utc": "2026-09-09T11:11:20.323278+00:00"
+}

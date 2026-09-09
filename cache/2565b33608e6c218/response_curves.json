@@ -1,0 +1,2599 @@
+{
+  "Online_Video": [
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 0.0,
+      "spend_pct_of_current": 0.0,
+      "incremental_outcome_mean": 0.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 0.05,
+      "spend_pct_of_current": 5.0,
+      "incremental_outcome_mean": 75270.83660377836,
+      "ci_lower": 12979.458346131196,
+      "ci_upper": 153127.73459614973,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 0.1,
+      "spend_pct_of_current": 10.0,
+      "incremental_outcome_mean": 136901.98275670156,
+      "ci_lower": 24434.056879294425,
+      "ci_upper": 276233.4163909572,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 0.15,
+      "spend_pct_of_current": 15.0,
+      "incremental_outcome_mean": 191823.7756895574,
+      "ci_lower": 34923.657918561454,
+      "ci_upper": 386073.2323103017,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 0.2,
+      "spend_pct_of_current": 20.0,
+      "incremental_outcome_mean": 238682.2078703388,
+      "ci_lower": 44313.69110515473,
+      "ci_upper": 478270.7710707757,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 0.25,
+      "spend_pct_of_current": 25.0,
+      "incremental_outcome_mean": 283252.0940306231,
+      "ci_lower": 52898.706675461086,
+      "ci_upper": 567544.8440537243,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 0.3,
+      "spend_pct_of_current": 30.0,
+      "incremental_outcome_mean": 326303.0407086062,
+      "ci_lower": 60308.46307032616,
+      "ci_upper": 655926.7776491939,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 0.35,
+      "spend_pct_of_current": 35.0,
+      "incremental_outcome_mean": 356309.8458677959,
+      "ci_lower": 67715.48724315141,
+      "ci_upper": 710812.3920356698,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 0.4,
+      "spend_pct_of_current": 40.0,
+      "incremental_outcome_mean": 391070.7065168135,
+      "ci_lower": 74336.20454951393,
+      "ci_upper": 780796.8050079196,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 0.45,
+      "spend_pct_of_current": 45.0,
+      "incremental_outcome_mean": 422613.8369547214,
+      "ci_lower": 80663.20131758435,
+      "ci_upper": 843669.6927455253,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 0.5,
+      "spend_pct_of_current": 50.0,
+      "incremental_outcome_mean": 448900.8647463331,
+      "ci_lower": 86916.0992919427,
+      "ci_upper": 893550.3977265724,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 0.55,
+      "spend_pct_of_current": 55.00000000000001,
+      "incremental_outcome_mean": 473032.6879791217,
+      "ci_lower": 92976.68004041164,
+      "ci_upper": 938799.6861273567,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 0.6,
+      "spend_pct_of_current": 60.0,
+      "incremental_outcome_mean": 495139.4731956176,
+      "ci_lower": 98859.06826461558,
+      "ci_upper": 979646.2898890441,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 0.65,
+      "spend_pct_of_current": 65.0,
+      "incremental_outcome_mean": 514728.42128146504,
+      "ci_lower": 102243.62716745035,
+      "ci_upper": 1016987.4501457996,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 0.7,
+      "spend_pct_of_current": 70.0,
+      "incremental_outcome_mean": 534150.3679921877,
+      "ci_lower": 106740.61815223054,
+      "ci_upper": 1053481.7265993147,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 0.75,
+      "spend_pct_of_current": 75.0,
+      "incremental_outcome_mean": 553571.5538863675,
+      "ci_lower": 111001.1107716294,
+      "ci_upper": 1090859.333467272,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 0.8,
+      "spend_pct_of_current": 80.0,
+      "incremental_outcome_mean": 568352.355445103,
+      "ci_lower": 115008.5789216189,
+      "ci_upper": 1116551.1693449414,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 0.85,
+      "spend_pct_of_current": 85.0,
+      "incremental_outcome_mean": 585483.314366232,
+      "ci_lower": 118764.86225375229,
+      "ci_upper": 1149378.613535261,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 0.9,
+      "spend_pct_of_current": 90.0,
+      "incremental_outcome_mean": 604490.3119068826,
+      "ci_lower": 122358.33828662356,
+      "ci_upper": 1187928.1203075203,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 0.95,
+      "spend_pct_of_current": 95.0,
+      "incremental_outcome_mean": 620587.4053374358,
+      "ci_lower": 125799.3161911116,
+      "ci_upper": 1219227.5186282704,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 1.0,
+      "spend_pct_of_current": 100.0,
+      "incremental_outcome_mean": 634479.7402541285,
+      "ci_lower": 129072.21487900792,
+      "ci_upper": 1245160.9159265342,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 1.05,
+      "spend_pct_of_current": 105.0,
+      "incremental_outcome_mean": 649036.1421715418,
+      "ci_lower": 132624.6936854059,
+      "ci_upper": 1272994.9258188643,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 1.1,
+      "spend_pct_of_current": 110.00000000000001,
+      "incremental_outcome_mean": 663101.1548774653,
+      "ci_lower": 136050.41077176767,
+      "ci_upper": 1299987.8863200736,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 1.15,
+      "spend_pct_of_current": 114.99999999999999,
+      "incremental_outcome_mean": 675600.332890391,
+      "ci_lower": 139237.34958974703,
+      "ci_upper": 1323325.3849532749,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 1.2,
+      "spend_pct_of_current": 120.0,
+      "incremental_outcome_mean": 687138.566976431,
+      "ci_lower": 141357.91009906793,
+      "ci_upper": 1345445.2796183748,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 1.25,
+      "spend_pct_of_current": 125.0,
+      "incremental_outcome_mean": 697940.13231348,
+      "ci_lower": 143373.17507963226,
+      "ci_upper": 1365971.2531362153,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 1.3,
+      "spend_pct_of_current": 130.0,
+      "incremental_outcome_mean": 708477.5744574614,
+      "ci_lower": 145626.12171447868,
+      "ci_upper": 1385817.3315640942,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 1.35,
+      "spend_pct_of_current": 135.0,
+      "incremental_outcome_mean": 718521.5898388479,
+      "ci_lower": 147647.89700044767,
+      "ci_upper": 1404816.0624980882,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 1.4,
+      "spend_pct_of_current": 140.0,
+      "incremental_outcome_mean": 728041.1600191494,
+      "ci_lower": 149370.96959221814,
+      "ci_upper": 1422935.5340004724,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 1.45,
+      "spend_pct_of_current": 145.0,
+      "incremental_outcome_mean": 737201.8437384461,
+      "ci_lower": 151168.09105844147,
+      "ci_upper": 1440235.6367045562,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 1.5,
+      "spend_pct_of_current": 150.0,
+      "incremental_outcome_mean": 746181.9022740953,
+      "ci_lower": 153452.8279973508,
+      "ci_upper": 1456770.9272299116,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 1.55,
+      "spend_pct_of_current": 155.0,
+      "incremental_outcome_mean": 754789.9380056787,
+      "ci_lower": 155646.47969030245,
+      "ci_upper": 1472591.2104290647,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 1.6,
+      "spend_pct_of_current": 160.0,
+      "incremental_outcome_mean": 763052.4240181913,
+      "ci_lower": 157763.792177314,
+      "ci_upper": 1487742.046848563,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 1.65,
+      "spend_pct_of_current": 165.0,
+      "incremental_outcome_mean": 773103.0450092941,
+      "ci_lower": 159835.38576790623,
+      "ci_upper": 1507943.4507372146,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 1.7,
+      "spend_pct_of_current": 170.0,
+      "incremental_outcome_mean": 783297.2829628978,
+      "ci_lower": 161846.0762347103,
+      "ci_upper": 1528760.8667377122,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 1.75,
+      "spend_pct_of_current": 175.0,
+      "incremental_outcome_mean": 791286.1070091181,
+      "ci_lower": 163772.27710249624,
+      "ci_upper": 1543866.6566472321,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 1.8,
+      "spend_pct_of_current": 180.0,
+      "incremental_outcome_mean": 801559.6195894171,
+      "ci_lower": 165458.4597224848,
+      "ci_upper": 1565531.4189088873,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 1.85,
+      "spend_pct_of_current": 185.0,
+      "incremental_outcome_mean": 812083.2997326216,
+      "ci_lower": 167087.5172402899,
+      "ci_upper": 1588071.4237498501,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 1.9,
+      "spend_pct_of_current": 190.0,
+      "incremental_outcome_mean": 822196.208746037,
+      "ci_lower": 168662.3496529358,
+      "ci_upper": 1609692.1321197818,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 1.95,
+      "spend_pct_of_current": 195.0,
+      "incremental_outcome_mean": 831934.2621347302,
+      "ci_lower": 170165.56510580514,
+      "ci_upper": 1630501.2827493062,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Online_Video",
+      "spend_multiplier": 2.0,
+      "spend_pct_of_current": 200.0,
+      "incremental_outcome_mean": 838958.9337242168,
+      "ci_lower": 171476.55447553901,
+      "ci_upper": 1644299.2777133423,
+      "ci_level": 0.9
+    }
+  ],
+  "Display": [
+    {
+      "channel": "Display",
+      "spend_multiplier": 0.0,
+      "spend_pct_of_current": 0.0,
+      "incremental_outcome_mean": 0.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 0.05,
+      "spend_pct_of_current": 5.0,
+      "incremental_outcome_mean": 1396535.1904184239,
+      "ci_lower": 220206.6592756434,
+      "ci_upper": 2509366.7959773457,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 0.1,
+      "spend_pct_of_current": 10.0,
+      "incremental_outcome_mean": 2718836.6947193216,
+      "ci_lower": 423016.9260066056,
+      "ci_upper": 4895103.333441881,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 0.15,
+      "spend_pct_of_current": 15.0,
+      "incremental_outcome_mean": 3948118.605090028,
+      "ci_lower": 610874.3746809944,
+      "ci_upper": 7098491.44366172,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 0.2,
+      "spend_pct_of_current": 20.0,
+      "incremental_outcome_mean": 5120910.646835681,
+      "ci_lower": 785747.3667136531,
+      "ci_upper": 9211418.57159029,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 0.25,
+      "spend_pct_of_current": 25.0,
+      "incremental_outcome_mean": 6213306.674300301,
+      "ci_lower": 949113.7047931498,
+      "ci_upper": 11163702.374982458,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 0.3,
+      "spend_pct_of_current": 30.0,
+      "incremental_outcome_mean": 7256564.033525108,
+      "ci_lower": 1102251.6070249514,
+      "ci_upper": 13034806.444891553,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 0.35,
+      "spend_pct_of_current": 35.0,
+      "incremental_outcome_mean": 8258079.434798057,
+      "ci_lower": 1246235.2362943303,
+      "ci_upper": 14840396.158333521,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 0.4,
+      "spend_pct_of_current": 40.0,
+      "incremental_outcome_mean": 9192143.536814397,
+      "ci_lower": 1381976.8289218422,
+      "ci_upper": 16507268.848034352,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 0.45,
+      "spend_pct_of_current": 45.0,
+      "incremental_outcome_mean": 10078636.50704462,
+      "ci_lower": 1510258.3198367339,
+      "ci_upper": 18085748.163080934,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 0.5,
+      "spend_pct_of_current": 50.0,
+      "incremental_outcome_mean": 10969367.844692962,
+      "ci_lower": 1632394.806811405,
+      "ci_upper": 19712095.805127792,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 0.55,
+      "spend_pct_of_current": 55.00000000000001,
+      "incremental_outcome_mean": 11811953.519991942,
+      "ci_lower": 1754093.19006959,
+      "ci_upper": 21237086.28271328,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 0.6,
+      "spend_pct_of_current": 60.0,
+      "incremental_outcome_mean": 12593132.196949994,
+      "ci_lower": 1872741.7975323745,
+      "ci_upper": 22625642.0310323,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 0.65,
+      "spend_pct_of_current": 65.0,
+      "incremental_outcome_mean": 13338330.372266794,
+      "ci_lower": 1986517.4475251548,
+      "ci_upper": 23946527.80493277,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 0.7,
+      "spend_pct_of_current": 70.0,
+      "incremental_outcome_mean": 14056400.197622156,
+      "ci_lower": 2095726.1695485495,
+      "ci_upper": 25221781.39827625,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 0.75,
+      "spend_pct_of_current": 75.0,
+      "incremental_outcome_mean": 14738865.067982143,
+      "ci_lower": 2191781.1877209805,
+      "ci_upper": 26435681.117223963,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 0.8,
+      "spend_pct_of_current": 80.0,
+      "incremental_outcome_mean": 15411288.556490302,
+      "ci_lower": 2282335.1968324305,
+      "ci_upper": 27648294.505000755,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 0.85,
+      "spend_pct_of_current": 85.0,
+      "incremental_outcome_mean": 16037223.192879228,
+      "ci_lower": 2374790.878396405,
+      "ci_upper": 28752616.48498629,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 0.9,
+      "spend_pct_of_current": 90.0,
+      "incremental_outcome_mean": 16691562.386110514,
+      "ci_lower": 2463620.318977998,
+      "ci_upper": 29955288.829672977,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 0.95,
+      "spend_pct_of_current": 95.0,
+      "incremental_outcome_mean": 17365599.489809416,
+      "ci_lower": 2549637.953434576,
+      "ci_upper": 31230976.85261624,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 1.0,
+      "spend_pct_of_current": 100.0,
+      "incremental_outcome_mean": 17973795.5761677,
+      "ci_lower": 2632512.3084684582,
+      "ci_upper": 32348122.05014522,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 1.05,
+      "spend_pct_of_current": 105.0,
+      "incremental_outcome_mean": 18535393.20072214,
+      "ci_lower": 2712352.4296178496,
+      "ci_upper": 33357705.287395004,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 1.1,
+      "spend_pct_of_current": 110.00000000000001,
+      "incremental_outcome_mean": 19077040.166019052,
+      "ci_lower": 2789328.0707278745,
+      "ci_upper": 34330704.11850578,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 1.15,
+      "spend_pct_of_current": 114.99999999999999,
+      "incremental_outcome_mean": 19626792.413878407,
+      "ci_lower": 2863596.1544514787,
+      "ci_upper": 35341968.25564348,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 1.2,
+      "spend_pct_of_current": 120.0,
+      "incremental_outcome_mean": 20167536.526353553,
+      "ci_lower": 2935301.99488561,
+      "ci_upper": 36344453.885754354,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 1.25,
+      "spend_pct_of_current": 125.0,
+      "incremental_outcome_mean": 20692255.633843377,
+      "ci_lower": 3004580.3797820956,
+      "ci_upper": 37318435.904116146,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 1.3,
+      "spend_pct_of_current": 130.0,
+      "incremental_outcome_mean": 21201665.812198695,
+      "ci_lower": 3071556.531174374,
+      "ci_upper": 38265121.091334775,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 1.35,
+      "spend_pct_of_current": 135.0,
+      "incremental_outcome_mean": 21696440.16929026,
+      "ci_lower": 3136346.9603750887,
+      "ci_upper": 39185648.595019475,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 1.4,
+      "spend_pct_of_current": 140.0,
+      "incremental_outcome_mean": 22177224.264858767,
+      "ci_lower": 3199093.0793203716,
+      "ci_upper": 40081094.63785258,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 1.45,
+      "spend_pct_of_current": 145.0,
+      "incremental_outcome_mean": 22656210.08011079,
+      "ci_lower": 3259944.2019802276,
+      "ci_upper": 40983736.25603267,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 1.5,
+      "spend_pct_of_current": 150.0,
+      "incremental_outcome_mean": 23144297.405654266,
+      "ci_lower": 3318914.708689146,
+      "ci_upper": 41922527.20026949,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 1.55,
+      "spend_pct_of_current": 155.0,
+      "incremental_outcome_mean": 23549261.954760876,
+      "ci_lower": 3376092.93039183,
+      "ci_upper": 42647940.536563754,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 1.6,
+      "spend_pct_of_current": 160.0,
+      "incremental_outcome_mean": 23970676.7208283,
+      "ci_lower": 3431561.6129202596,
+      "ci_upper": 43428333.6576445,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 1.65,
+      "spend_pct_of_current": 165.0,
+      "incremental_outcome_mean": 24384416.484543156,
+      "ci_lower": 3485398.361231319,
+      "ci_upper": 44198108.02397586,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 1.7,
+      "spend_pct_of_current": 170.0,
+      "incremental_outcome_mean": 24739476.28868349,
+      "ci_lower": 3537676.0410977616,
+      "ci_upper": 44819116.842629984,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 1.75,
+      "spend_pct_of_current": 175.0,
+      "incremental_outcome_mean": 25080360.187474046,
+      "ci_lower": 3588463.1430107793,
+      "ci_upper": 45411112.688160576,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 1.8,
+      "spend_pct_of_current": 180.0,
+      "incremental_outcome_mean": 25413913.353819627,
+      "ci_lower": 3637824.1124450853,
+      "ci_upper": 45992192.36899292,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 1.85,
+      "spend_pct_of_current": 185.0,
+      "incremental_outcome_mean": 25740044.944758322,
+      "ci_lower": 3686768.609235208,
+      "ci_upper": 46560798.04230704,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 1.9,
+      "spend_pct_of_current": 190.0,
+      "incremental_outcome_mean": 26057683.3952959,
+      "ci_lower": 3736330.0929881977,
+      "ci_upper": 47112716.67654973,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 1.95,
+      "spend_pct_of_current": 195.0,
+      "incremental_outcome_mean": 26366500.5799849,
+      "ci_lower": 3784623.034591838,
+      "ci_upper": 47648676.93599863,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Display",
+      "spend_multiplier": 2.0,
+      "spend_pct_of_current": 200.0,
+      "incremental_outcome_mean": 26666570.96762225,
+      "ci_lower": 3831697.971303148,
+      "ci_upper": 48168572.79797045,
+      "ci_level": 0.9
+    }
+  ],
+  "Paid_Social": [
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 0.0,
+      "spend_pct_of_current": 0.0,
+      "incremental_outcome_mean": 0.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 0.05,
+      "spend_pct_of_current": 5.0,
+      "incremental_outcome_mean": 2142388.040234455,
+      "ci_lower": 1168221.3152701466,
+      "ci_upper": 3241778.7600803366,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 0.1,
+      "spend_pct_of_current": 10.0,
+      "incremental_outcome_mean": 4141425.259240102,
+      "ci_lower": 2280717.581768028,
+      "ci_upper": 6235079.201653906,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 0.15,
+      "spend_pct_of_current": 15.0,
+      "incremental_outcome_mean": 6004620.734930166,
+      "ci_lower": 3346512.0301786875,
+      "ci_upper": 8982955.497404337,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 0.2,
+      "spend_pct_of_current": 20.0,
+      "incremental_outcome_mean": 7770608.906220025,
+      "ci_lower": 4363028.068531323,
+      "ci_upper": 11585291.97578143,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 0.25,
+      "spend_pct_of_current": 25.0,
+      "incremental_outcome_mean": 9494524.181022743,
+      "ci_lower": 5338073.638274168,
+      "ci_upper": 14177091.092945075,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 0.3,
+      "spend_pct_of_current": 30.0,
+      "incremental_outcome_mean": 11046367.798516108,
+      "ci_lower": 6266360.922527201,
+      "ci_upper": 16407368.060291246,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 0.35,
+      "spend_pct_of_current": 35.0,
+      "incremental_outcome_mean": 12558675.025897471,
+      "ci_lower": 7151476.912401386,
+      "ci_upper": 18625747.775651112,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 0.4,
+      "spend_pct_of_current": 40.0,
+      "incremental_outcome_mean": 13951400.242051164,
+      "ci_lower": 8005330.786359231,
+      "ci_upper": 20600102.905626763,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 0.45,
+      "spend_pct_of_current": 45.0,
+      "incremental_outcome_mean": 15287539.940742075,
+      "ci_lower": 8823941.595953852,
+      "ci_upper": 22500865.595033813,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 0.5,
+      "spend_pct_of_current": 50.0,
+      "incremental_outcome_mean": 16536857.260380276,
+      "ci_lower": 9578190.386891337,
+      "ci_upper": 24272264.941316135,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 0.55,
+      "spend_pct_of_current": 55.00000000000001,
+      "incremental_outcome_mean": 17750613.37065965,
+      "ci_lower": 10292360.412640005,
+      "ci_upper": 26025507.1484693,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 0.6,
+      "spend_pct_of_current": 60.0,
+      "incremental_outcome_mean": 18887170.51066825,
+      "ci_lower": 11009618.408599865,
+      "ci_upper": 27602377.594250385,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 0.65,
+      "spend_pct_of_current": 65.0,
+      "incremental_outcome_mean": 20003264.710473098,
+      "ci_lower": 11722434.710335804,
+      "ci_upper": 29161219.696261737,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 0.7,
+      "spend_pct_of_current": 70.0,
+      "incremental_outcome_mean": 21054714.191590052,
+      "ci_lower": 12411589.897508238,
+      "ci_upper": 30599809.570078533,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 0.75,
+      "spend_pct_of_current": 75.0,
+      "incremental_outcome_mean": 22029849.02511037,
+      "ci_lower": 12994903.084984249,
+      "ci_upper": 31966861.266939282,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 0.8,
+      "spend_pct_of_current": 80.0,
+      "incremental_outcome_mean": 22985561.58854829,
+      "ci_lower": 13582496.309400659,
+      "ci_upper": 33304076.010941267,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 0.85,
+      "spend_pct_of_current": 85.0,
+      "incremental_outcome_mean": 23986250.81749493,
+      "ci_lower": 14169680.522137374,
+      "ci_upper": 34788386.31471278,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 0.9,
+      "spend_pct_of_current": 90.0,
+      "incremental_outcome_mean": 24899934.220915105,
+      "ci_lower": 14641945.705169084,
+      "ci_upper": 36176451.61865361,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 0.95,
+      "spend_pct_of_current": 95.0,
+      "incremental_outcome_mean": 25805055.480243415,
+      "ci_lower": 15182670.210943287,
+      "ci_upper": 37495315.02338425,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 1.0,
+      "spend_pct_of_current": 100.0,
+      "incremental_outcome_mean": 26678635.82588168,
+      "ci_lower": 15720449.952352913,
+      "ci_upper": 38753070.25381147,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 1.05,
+      "spend_pct_of_current": 105.0,
+      "incremental_outcome_mean": 27462198.360216703,
+      "ci_lower": 16168053.621909847,
+      "ci_upper": 39877891.14067875,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 1.1,
+      "spend_pct_of_current": 110.00000000000001,
+      "incremental_outcome_mean": 28158500.844234854,
+      "ci_lower": 16577840.396092903,
+      "ci_upper": 40823782.82055741,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 1.15,
+      "spend_pct_of_current": 114.99999999999999,
+      "incremental_outcome_mean": 28833855.982133936,
+      "ci_lower": 17033289.546468742,
+      "ci_upper": 41685308.42808955,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 1.2,
+      "spend_pct_of_current": 120.0,
+      "incremental_outcome_mean": 29529527.26900789,
+      "ci_lower": 17475114.14392481,
+      "ci_upper": 42632236.70579861,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 1.25,
+      "spend_pct_of_current": 125.0,
+      "incremental_outcome_mean": 30256404.075235963,
+      "ci_lower": 17904269.007722333,
+      "ci_upper": 43692150.16149989,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 1.3,
+      "spend_pct_of_current": 130.0,
+      "incremental_outcome_mean": 30957580.596278537,
+      "ci_lower": 18321002.748442158,
+      "ci_upper": 44710350.306606986,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 1.35,
+      "spend_pct_of_current": 135.0,
+      "incremental_outcome_mean": 31627462.827650253,
+      "ci_lower": 18714579.22652781,
+      "ci_upper": 45681719.78783136,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 1.4,
+      "spend_pct_of_current": 140.0,
+      "incremental_outcome_mean": 32297020.683178306,
+      "ci_lower": 19122077.83700062,
+      "ci_upper": 46652098.13818359,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 1.45,
+      "spend_pct_of_current": 145.0,
+      "incremental_outcome_mean": 32933019.338899743,
+      "ci_lower": 19496047.58147362,
+      "ci_upper": 47578548.13832148,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 1.5,
+      "spend_pct_of_current": 150.0,
+      "incremental_outcome_mean": 33539378.575008895,
+      "ci_lower": 19830359.011371206,
+      "ci_upper": 48477170.329832144,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 1.55,
+      "spend_pct_of_current": 155.0,
+      "incremental_outcome_mean": 34127409.55017736,
+      "ci_lower": 20153737.475728635,
+      "ci_upper": 49349205.66822678,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 1.6,
+      "spend_pct_of_current": 160.0,
+      "incremental_outcome_mean": 34725283.8875272,
+      "ci_lower": 20483692.39310491,
+      "ci_upper": 50252669.725791216,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 1.65,
+      "spend_pct_of_current": 165.0,
+      "incremental_outcome_mean": 35287639.36032844,
+      "ci_lower": 20849601.100795146,
+      "ci_upper": 51035201.43053189,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 1.7,
+      "spend_pct_of_current": 170.0,
+      "incremental_outcome_mean": 35810657.645433925,
+      "ci_lower": 21134711.125029154,
+      "ci_upper": 51802768.22789463,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 1.75,
+      "spend_pct_of_current": 175.0,
+      "incremental_outcome_mean": 36265429.46275824,
+      "ci_lower": 21422648.383515343,
+      "ci_upper": 52393241.48438187,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 1.8,
+      "spend_pct_of_current": 180.0,
+      "incremental_outcome_mean": 36798690.310726434,
+      "ci_lower": 21789549.71429518,
+      "ci_upper": 53126248.3806513,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 1.85,
+      "spend_pct_of_current": 185.0,
+      "incremental_outcome_mean": 37272158.70843893,
+      "ci_lower": 22149210.588952992,
+      "ci_upper": 53714235.57297495,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 1.9,
+      "spend_pct_of_current": 190.0,
+      "incremental_outcome_mean": 37658562.398474865,
+      "ci_lower": 22448105.27845132,
+      "ci_upper": 54136718.06099942,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 1.95,
+      "spend_pct_of_current": 195.0,
+      "incremental_outcome_mean": 38072474.46351535,
+      "ci_lower": 22732324.13362053,
+      "ci_upper": 54656597.856327266,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Social",
+      "spend_multiplier": 2.0,
+      "spend_pct_of_current": 200.0,
+      "incremental_outcome_mean": 38487691.36582982,
+      "ci_lower": 23009132.202799905,
+      "ci_upper": 55195524.638813876,
+      "ci_level": 0.9
+    }
+  ],
+  "Paid_Search": [
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 0.0,
+      "spend_pct_of_current": 0.0,
+      "incremental_outcome_mean": 0.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 0.05,
+      "spend_pct_of_current": 5.0,
+      "incremental_outcome_mean": 3675164.171260255,
+      "ci_lower": 379264.38389858586,
+      "ci_upper": 7233774.7582081,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 0.1,
+      "spend_pct_of_current": 10.0,
+      "incremental_outcome_mean": 7217392.353752129,
+      "ci_lower": 740001.7510605239,
+      "ci_upper": 14228745.881545942,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 0.15,
+      "spend_pct_of_current": 15.0,
+      "incremental_outcome_mean": 10601503.292135777,
+      "ci_lower": 1078903.1343104558,
+      "ci_upper": 20912567.87454263,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 0.2,
+      "spend_pct_of_current": 20.0,
+      "incremental_outcome_mean": 13890837.828190511,
+      "ci_lower": 1400887.853673407,
+      "ci_upper": 27444673.49232488,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 0.25,
+      "spend_pct_of_current": 25.0,
+      "incremental_outcome_mean": 17067705.426013324,
+      "ci_lower": 1706524.3067427278,
+      "ci_upper": 33770819.53114967,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 0.3,
+      "spend_pct_of_current": 30.0,
+      "incremental_outcome_mean": 20160570.98345055,
+      "ci_lower": 2005842.5072416968,
+      "ci_upper": 39952535.56650881,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 0.35,
+      "spend_pct_of_current": 35.0,
+      "incremental_outcome_mean": 23129766.931604415,
+      "ci_lower": 2294333.7766518607,
+      "ci_upper": 45882447.90494376,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 0.4,
+      "spend_pct_of_current": 40.0,
+      "incremental_outcome_mean": 25966957.16618892,
+      "ci_lower": 2568303.8161142603,
+      "ci_upper": 51537404.873345286,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 0.45,
+      "spend_pct_of_current": 45.0,
+      "incremental_outcome_mean": 28688183.65659194,
+      "ci_lower": 2826350.817239938,
+      "ci_upper": 56958166.14318502,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 0.5,
+      "spend_pct_of_current": 50.0,
+      "incremental_outcome_mean": 31284740.88855015,
+      "ci_lower": 3074084.2087294,
+      "ci_upper": 62111997.59861377,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 0.55,
+      "spend_pct_of_current": 55.00000000000001,
+      "incremental_outcome_mean": 33786827.90395934,
+      "ci_lower": 3312736.9198668203,
+      "ci_upper": 67075880.32462607,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 0.6,
+      "spend_pct_of_current": 60.0,
+      "incremental_outcome_mean": 36220296.95596846,
+      "ci_lower": 3547301.683061187,
+      "ci_upper": 71911562.64231862,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 0.65,
+      "spend_pct_of_current": 65.0,
+      "incremental_outcome_mean": 38649231.275625944,
+      "ci_lower": 3775749.556812759,
+      "ci_upper": 76791273.4310362,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 0.7,
+      "spend_pct_of_current": 70.0,
+      "incremental_outcome_mean": 40988706.31340832,
+      "ci_lower": 3993102.9467202993,
+      "ci_upper": 81488080.28412877,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 0.75,
+      "spend_pct_of_current": 75.0,
+      "incremental_outcome_mean": 43199284.26151434,
+      "ci_lower": 4201269.299033506,
+      "ci_upper": 85891170.08218029,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 0.8,
+      "spend_pct_of_current": 80.0,
+      "incremental_outcome_mean": 45340237.78798667,
+      "ci_lower": 4401660.39826815,
+      "ci_upper": 90156915.51381594,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 0.85,
+      "spend_pct_of_current": 85.0,
+      "incremental_outcome_mean": 47413482.88159156,
+      "ci_lower": 4595097.384359129,
+      "ci_upper": 94287572.72189677,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 0.9,
+      "spend_pct_of_current": 90.0,
+      "incremental_outcome_mean": 49459192.11219839,
+      "ci_lower": 4782254.790029446,
+      "ci_upper": 98388978.95072809,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 0.95,
+      "spend_pct_of_current": 95.0,
+      "incremental_outcome_mean": 51512501.586218506,
+      "ci_lower": 4963461.830389629,
+      "ci_upper": 102553847.53651099,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 1.0,
+      "spend_pct_of_current": 100.0,
+      "incremental_outcome_mean": 53392821.122159205,
+      "ci_lower": 5139027.654099615,
+      "ci_upper": 106292569.01954156,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 1.05,
+      "spend_pct_of_current": 105.0,
+      "incremental_outcome_mean": 55206749.00815777,
+      "ci_lower": 5309602.163777681,
+      "ci_upper": 109890710.25740045,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 1.1,
+      "spend_pct_of_current": 110.00000000000001,
+      "incremental_outcome_mean": 57005408.53543917,
+      "ci_lower": 5477957.838748919,
+      "ci_upper": 113482032.37107474,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 1.15,
+      "spend_pct_of_current": 114.99999999999999,
+      "incremental_outcome_mean": 58811285.766231775,
+      "ci_lower": 5637397.457304285,
+      "ci_upper": 117132537.03155147,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 1.2,
+      "spend_pct_of_current": 120.0,
+      "incremental_outcome_mean": 60571790.28658283,
+      "ci_lower": 5798081.282126522,
+      "ci_upper": 120688746.13658664,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 1.25,
+      "spend_pct_of_current": 125.0,
+      "incremental_outcome_mean": 62298580.84821558,
+      "ci_lower": 5948407.99679664,
+      "ci_upper": 124192493.63486513,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 1.3,
+      "spend_pct_of_current": 130.0,
+      "incremental_outcome_mean": 64030313.004186,
+      "ci_lower": 6094530.714309868,
+      "ci_upper": 127740822.27725445,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 1.35,
+      "spend_pct_of_current": 135.0,
+      "incremental_outcome_mean": 65699829.20262834,
+      "ci_lower": 6236634.832127663,
+      "ci_upper": 131151113.70349309,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 1.4,
+      "spend_pct_of_current": 140.0,
+      "incremental_outcome_mean": 67305676.67394054,
+      "ci_lower": 6374894.120646953,
+      "ci_upper": 134418225.8217847,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 1.45,
+      "spend_pct_of_current": 145.0,
+      "incremental_outcome_mean": 68799757.49088399,
+      "ci_lower": 6509471.705351291,
+      "ci_upper": 137411142.59261015,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 1.5,
+      "spend_pct_of_current": 150.0,
+      "incremental_outcome_mean": 70276088.25549273,
+      "ci_lower": 6640520.9416724285,
+      "ci_upper": 140382620.29708582,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 1.55,
+      "spend_pct_of_current": 155.0,
+      "incremental_outcome_mean": 71725999.77543001,
+      "ci_lower": 6768186.197131485,
+      "ci_upper": 143308222.21407786,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 1.6,
+      "spend_pct_of_current": 160.0,
+      "incremental_outcome_mean": 73175785.39165473,
+      "ci_lower": 6892603.552963352,
+      "ci_upper": 146257965.04552355,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 1.65,
+      "spend_pct_of_current": 165.0,
+      "incremental_outcome_mean": 74647558.53403534,
+      "ci_lower": 7014247.006316858,
+      "ci_upper": 149290285.03467125,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 1.7,
+      "spend_pct_of_current": 170.0,
+      "incremental_outcome_mean": 75975191.04863657,
+      "ci_lower": 7133235.571697891,
+      "ci_upper": 151955761.51918325,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 1.75,
+      "spend_pct_of_current": 175.0,
+      "incremental_outcome_mean": 77330264.78065687,
+      "ci_lower": 7250428.909585308,
+      "ci_upper": 154716087.97363037,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 1.8,
+      "spend_pct_of_current": 180.0,
+      "incremental_outcome_mean": 78657937.60208806,
+      "ci_lower": 7367215.747414353,
+      "ci_upper": 157421119.4651456,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 1.85,
+      "spend_pct_of_current": 185.0,
+      "incremental_outcome_mean": 79951302.63325322,
+      "ci_lower": 7481267.669921733,
+      "ci_upper": 160053886.5488187,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 1.9,
+      "spend_pct_of_current": 190.0,
+      "incremental_outcome_mean": 81213278.4730003,
+      "ci_lower": 7592681.948505341,
+      "ci_upper": 162621554.01602206,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 1.95,
+      "spend_pct_of_current": 195.0,
+      "incremental_outcome_mean": 82447313.02521174,
+      "ci_lower": 7701551.183410709,
+      "ci_upper": 165132749.6933024,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Paid_Search",
+      "spend_multiplier": 2.0,
+      "spend_pct_of_current": 200.0,
+      "incremental_outcome_mean": 83655160.52351205,
+      "ci_lower": 7807991.535259744,
+      "ci_upper": 167591532.42677382,
+      "ci_level": 0.9
+    }
+  ],
+  "Affiliate": [
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 0.0,
+      "spend_pct_of_current": 0.0,
+      "incremental_outcome_mean": 0.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 0.05,
+      "spend_pct_of_current": 5.0,
+      "incremental_outcome_mean": 3588751.930542938,
+      "ci_lower": 3040505.8730194285,
+      "ci_upper": 4181508.0800947873,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 0.1,
+      "spend_pct_of_current": 10.0,
+      "incremental_outcome_mean": 7031429.454244472,
+      "ci_lower": 5991456.368200781,
+      "ci_upper": 8151004.3114046445,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 0.15,
+      "spend_pct_of_current": 15.0,
+      "incremental_outcome_mean": 10337226.442760168,
+      "ci_lower": 8856201.699063698,
+      "ci_upper": 11924497.839627048,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 0.2,
+      "spend_pct_of_current": 20.0,
+      "incremental_outcome_mean": 13508257.176322848,
+      "ci_lower": 11620670.189334175,
+      "ci_upper": 15516750.2506118,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 0.25,
+      "spend_pct_of_current": 25.0,
+      "incremental_outcome_mean": 16562810.103831068,
+      "ci_lower": 14319489.946137536,
+      "ci_upper": 18937892.097192645,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 0.3,
+      "spend_pct_of_current": 30.0,
+      "incremental_outcome_mean": 19492110.72470662,
+      "ci_lower": 16904561.27003059,
+      "ci_upper": 22208069.433242783,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 0.35,
+      "spend_pct_of_current": 35.0,
+      "incremental_outcome_mean": 22309868.906093486,
+      "ci_lower": 19407397.718711644,
+      "ci_upper": 25328844.832353562,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 0.4,
+      "spend_pct_of_current": 40.0,
+      "incremental_outcome_mean": 25052689.121118736,
+      "ci_lower": 21844826.572483588,
+      "ci_upper": 28378573.275033224,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 0.45,
+      "spend_pct_of_current": 45.0,
+      "incremental_outcome_mean": 27741161.95509122,
+      "ci_lower": 24279571.729363132,
+      "ci_upper": 31346738.770686295,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 0.5,
+      "spend_pct_of_current": 50.0,
+      "incremental_outcome_mean": 30321335.685279906,
+      "ci_lower": 26578075.743790552,
+      "ci_upper": 34218081.24278995,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 0.55,
+      "spend_pct_of_current": 55.00000000000001,
+      "incremental_outcome_mean": 32793609.610791653,
+      "ci_lower": 28850783.391874652,
+      "ci_upper": 36880303.37631209,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 0.6,
+      "spend_pct_of_current": 60.0,
+      "incremental_outcome_mean": 35176111.870423056,
+      "ci_lower": 31030006.09579709,
+      "ci_upper": 39447307.113963164,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 0.65,
+      "spend_pct_of_current": 65.0,
+      "incremental_outcome_mean": 37496062.44621457,
+      "ci_lower": 33123808.42658446,
+      "ci_upper": 41981970.151344955,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 0.7,
+      "spend_pct_of_current": 70.0,
+      "incremental_outcome_mean": 39723952.211382985,
+      "ci_lower": 35199839.395689346,
+      "ci_upper": 44334582.772406384,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 0.75,
+      "spend_pct_of_current": 75.0,
+      "incremental_outcome_mean": 41923429.01796717,
+      "ci_lower": 37239459.773487635,
+      "ci_upper": 46693399.2476083,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 0.8,
+      "spend_pct_of_current": 80.0,
+      "incremental_outcome_mean": 44041297.12397307,
+      "ci_lower": 39233979.991396815,
+      "ci_upper": 48921386.05357923,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 0.85,
+      "spend_pct_of_current": 85.0,
+      "incremental_outcome_mean": 46102517.59922871,
+      "ci_lower": 41179101.27297009,
+      "ci_upper": 51088270.7283579,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 0.9,
+      "spend_pct_of_current": 90.0,
+      "incremental_outcome_mean": 48113949.06676471,
+      "ci_lower": 43028765.0226602,
+      "ci_upper": 53256782.45358992,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 0.95,
+      "spend_pct_of_current": 95.0,
+      "incremental_outcome_mean": 50112147.090328895,
+      "ci_lower": 44915227.99839904,
+      "ci_upper": 55391626.15228006,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 1.0,
+      "spend_pct_of_current": 100.0,
+      "incremental_outcome_mean": 52006923.17570743,
+      "ci_lower": 46716118.66003483,
+      "ci_upper": 57370027.215325475,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 1.05,
+      "spend_pct_of_current": 105.0,
+      "incremental_outcome_mean": 53840237.79818201,
+      "ci_lower": 48437079.10824755,
+      "ci_upper": 59298093.262019865,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 1.1,
+      "spend_pct_of_current": 110.00000000000001,
+      "incremental_outcome_mean": 55628264.581317335,
+      "ci_lower": 50153804.840918936,
+      "ci_upper": 61142340.86400845,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 1.15,
+      "spend_pct_of_current": 114.99999999999999,
+      "incremental_outcome_mean": 57352272.16109016,
+      "ci_lower": 51802975.238297924,
+      "ci_upper": 62914139.89180047,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 1.2,
+      "spend_pct_of_current": 120.0,
+      "incremental_outcome_mean": 59069000.9043186,
+      "ci_lower": 53433194.61401433,
+      "ci_upper": 64716783.94033858,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 1.25,
+      "spend_pct_of_current": 125.0,
+      "incremental_outcome_mean": 60725520.013959505,
+      "ci_lower": 54979415.45284416,
+      "ci_upper": 66471176.09554894,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 1.3,
+      "spend_pct_of_current": 130.0,
+      "incremental_outcome_mean": 62345837.952805616,
+      "ci_lower": 56491670.19119784,
+      "ci_upper": 68190940.5524349,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 1.35,
+      "spend_pct_of_current": 135.0,
+      "incremental_outcome_mean": 63949470.06468775,
+      "ci_lower": 58075399.8814417,
+      "ci_upper": 69822222.17422111,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 1.4,
+      "spend_pct_of_current": 140.0,
+      "incremental_outcome_mean": 65470400.56572708,
+      "ci_lower": 59575368.943912745,
+      "ci_upper": 71340965.1164883,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 1.45,
+      "spend_pct_of_current": 145.0,
+      "incremental_outcome_mean": 66996778.94871014,
+      "ci_lower": 61061116.66336474,
+      "ci_upper": 72914637.94204788,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 1.5,
+      "spend_pct_of_current": 150.0,
+      "incremental_outcome_mean": 68469341.77507211,
+      "ci_lower": 62519367.58845568,
+      "ci_upper": 74395558.6689723,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 1.55,
+      "spend_pct_of_current": 155.0,
+      "incremental_outcome_mean": 69890338.78993475,
+      "ci_lower": 63906318.73531874,
+      "ci_upper": 75832704.94961795,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 1.6,
+      "spend_pct_of_current": 160.0,
+      "incremental_outcome_mean": 71269204.70449345,
+      "ci_lower": 65263574.67659212,
+      "ci_upper": 77209089.90489274,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 1.65,
+      "spend_pct_of_current": 165.0,
+      "incremental_outcome_mean": 72663207.53155829,
+      "ci_lower": 66590479.96375287,
+      "ci_upper": 78679177.53614521,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 1.7,
+      "spend_pct_of_current": 170.0,
+      "incremental_outcome_mean": 74028761.3022348,
+      "ci_lower": 67889381.5744539,
+      "ci_upper": 80122162.13930051,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 1.75,
+      "spend_pct_of_current": 175.0,
+      "incremental_outcome_mean": 75334908.81404917,
+      "ci_lower": 69093700.07859457,
+      "ci_upper": 81520298.26605819,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 1.8,
+      "spend_pct_of_current": 180.0,
+      "incremental_outcome_mean": 76575957.4217558,
+      "ci_lower": 70289148.1166702,
+      "ci_upper": 82771796.75340196,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 1.85,
+      "spend_pct_of_current": 185.0,
+      "incremental_outcome_mean": 77819417.0613381,
+      "ci_lower": 71460204.93853234,
+      "ci_upper": 84073780.87365836,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 1.9,
+      "spend_pct_of_current": 190.0,
+      "incremental_outcome_mean": 79023649.09842946,
+      "ci_lower": 72622464.28433114,
+      "ci_upper": 85297588.50700088,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 1.95,
+      "spend_pct_of_current": 195.0,
+      "incremental_outcome_mean": 80271071.13545841,
+      "ci_lower": 73812564.55373059,
+      "ci_upper": 86628493.24149643,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Affiliate",
+      "spend_multiplier": 2.0,
+      "spend_pct_of_current": 200.0,
+      "incremental_outcome_mean": 81422802.58150978,
+      "ci_lower": 74913656.15760362,
+      "ci_upper": 87807778.4669173,
+      "ci_level": 0.9
+    }
+  ],
+  "CTV": [
+    {
+      "channel": "CTV",
+      "spend_multiplier": 0.0,
+      "spend_pct_of_current": 0.0,
+      "incremental_outcome_mean": 0.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 0.05,
+      "spend_pct_of_current": 5.0,
+      "incremental_outcome_mean": 130457.72867289111,
+      "ci_lower": 26357.841605611073,
+      "ci_upper": 254003.88604608097,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 0.1,
+      "spend_pct_of_current": 10.0,
+      "incremental_outcome_mean": 260915.4573457695,
+      "ci_lower": 52715.683211208525,
+      "ci_upper": 508007.7720921499,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 0.15,
+      "spend_pct_of_current": 15.0,
+      "incremental_outcome_mean": 391373.1860186481,
+      "ci_lower": 79073.5248168082,
+      "ci_upper": 762011.6581382169,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 0.2,
+      "spend_pct_of_current": 20.0,
+      "incremental_outcome_mean": 521830.9146915272,
+      "ci_lower": 105431.36642240692,
+      "ci_upper": 1016015.5441842868,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 0.25,
+      "spend_pct_of_current": 25.0,
+      "incremental_outcome_mean": 652288.6433644061,
+      "ci_lower": 131789.2080280038,
+      "ci_upper": 1270019.4302303575,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 0.3,
+      "spend_pct_of_current": 30.0,
+      "incremental_outcome_mean": 782746.3720372847,
+      "ci_lower": 158147.04963360337,
+      "ci_upper": 1524023.3162764248,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 0.35,
+      "spend_pct_of_current": 35.0,
+      "incremental_outcome_mean": 913204.1007101634,
+      "ci_lower": 184504.89123920116,
+      "ci_upper": 1778027.2023224942,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 0.4,
+      "spend_pct_of_current": 40.0,
+      "incremental_outcome_mean": 1043661.8293830422,
+      "ci_lower": 210862.73284479923,
+      "ci_upper": 2032031.0883685634,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 0.45,
+      "spend_pct_of_current": 45.0,
+      "incremental_outcome_mean": 1174119.5580559212,
+      "ci_lower": 237220.57445039856,
+      "ci_upper": 2286034.9744146317,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 0.5,
+      "spend_pct_of_current": 50.0,
+      "incremental_outcome_mean": 1304577.2867288007,
+      "ci_lower": 263578.416055997,
+      "ci_upper": 2540038.8604607033,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 0.55,
+      "spend_pct_of_current": 55.00000000000001,
+      "incremental_outcome_mean": 1435035.015401679,
+      "ci_lower": 289936.25766159577,
+      "ci_upper": 2794042.7465067706,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 0.6,
+      "spend_pct_of_current": 60.0,
+      "incremental_outcome_mean": 1565492.7440745586,
+      "ci_lower": 316294.0992671938,
+      "ci_upper": 3048046.632552842,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 0.65,
+      "spend_pct_of_current": 65.0,
+      "incremental_outcome_mean": 1695950.472747436,
+      "ci_lower": 342651.9408727917,
+      "ci_upper": 3302050.518598908,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 0.7,
+      "spend_pct_of_current": 70.0,
+      "incremental_outcome_mean": 1826408.2014203146,
+      "ci_lower": 369009.7824783906,
+      "ci_upper": 3556054.4046449764,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 0.75,
+      "spend_pct_of_current": 75.0,
+      "incremental_outcome_mean": 1956865.9300931944,
+      "ci_lower": 395367.6240839899,
+      "ci_upper": 3810058.290691047,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 0.8,
+      "spend_pct_of_current": 80.0,
+      "incremental_outcome_mean": 2087323.6587660732,
+      "ci_lower": 421725.46568958816,
+      "ci_upper": 4064062.1767371157,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 0.85,
+      "spend_pct_of_current": 85.0,
+      "incremental_outcome_mean": 2217781.3874389525,
+      "ci_lower": 448083.3072951877,
+      "ci_upper": 4318066.062783184,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 0.9,
+      "spend_pct_of_current": 90.0,
+      "incremental_outcome_mean": 2348239.1161118303,
+      "ci_lower": 474441.14890078595,
+      "ci_upper": 4572069.948829251,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 0.95,
+      "spend_pct_of_current": 95.0,
+      "incremental_outcome_mean": 2478696.844784709,
+      "ci_lower": 500798.9905063837,
+      "ci_upper": 4826073.834875322,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 1.0,
+      "spend_pct_of_current": 100.0,
+      "incremental_outcome_mean": 2609154.5734575875,
+      "ci_lower": 527156.8321119822,
+      "ci_upper": 5080077.72092139,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 1.05,
+      "spend_pct_of_current": 105.0,
+      "incremental_outcome_mean": 2739612.3021304663,
+      "ci_lower": 553514.6737175798,
+      "ci_upper": 5334081.606967459,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 1.1,
+      "spend_pct_of_current": 110.00000000000001,
+      "incremental_outcome_mean": 2870070.030803345,
+      "ci_lower": 579872.5153231792,
+      "ci_upper": 5588085.493013528,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 1.15,
+      "spend_pct_of_current": 114.99999999999999,
+      "incremental_outcome_mean": 3000527.759476224,
+      "ci_lower": 606230.3569287775,
+      "ci_upper": 5842089.379059597,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 1.2,
+      "spend_pct_of_current": 120.0,
+      "incremental_outcome_mean": 3130985.488149103,
+      "ci_lower": 632588.198534376,
+      "ci_upper": 6096093.265105667,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 1.25,
+      "spend_pct_of_current": 125.0,
+      "incremental_outcome_mean": 3261443.216821981,
+      "ci_lower": 658946.0401399719,
+      "ci_upper": 6350097.151151735,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 1.3,
+      "spend_pct_of_current": 130.0,
+      "incremental_outcome_mean": 3391900.9454948604,
+      "ci_lower": 685303.8817455712,
+      "ci_upper": 6604101.037197805,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 1.35,
+      "spend_pct_of_current": 135.0,
+      "incremental_outcome_mean": 3522358.6741677388,
+      "ci_lower": 711661.7233511701,
+      "ci_upper": 6858104.923243873,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 1.4,
+      "spend_pct_of_current": 140.0,
+      "incremental_outcome_mean": 3652816.4028406176,
+      "ci_lower": 738019.5649567691,
+      "ci_upper": 7112108.809289942,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 1.45,
+      "spend_pct_of_current": 145.0,
+      "incremental_outcome_mean": 3783274.131513497,
+      "ci_lower": 764377.4065623683,
+      "ci_upper": 7366112.69533601,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 1.5,
+      "spend_pct_of_current": 150.0,
+      "incremental_outcome_mean": 3913731.8601863757,
+      "ci_lower": 790735.2481679666,
+      "ci_upper": 7620116.581382079,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 1.55,
+      "spend_pct_of_current": 155.0,
+      "incremental_outcome_mean": 4044189.588859254,
+      "ci_lower": 817093.0897735646,
+      "ci_upper": 7874120.467428148,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 1.6,
+      "spend_pct_of_current": 160.0,
+      "incremental_outcome_mean": 4174647.317532133,
+      "ci_lower": 843450.9313791629,
+      "ci_upper": 8128124.353474217,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 1.65,
+      "spend_pct_of_current": 165.0,
+      "incremental_outcome_mean": 4305105.046205011,
+      "ci_lower": 869808.772984761,
+      "ci_upper": 8382128.239520286,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 1.7,
+      "spend_pct_of_current": 170.0,
+      "incremental_outcome_mean": 4435562.77487789,
+      "ci_lower": 896166.6145903593,
+      "ci_upper": 8636132.125566356,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 1.75,
+      "spend_pct_of_current": 175.0,
+      "incremental_outcome_mean": 4566020.503550769,
+      "ci_lower": 922524.4561959582,
+      "ci_upper": 8890136.011612423,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 1.8,
+      "spend_pct_of_current": 180.0,
+      "incremental_outcome_mean": 4696478.232223649,
+      "ci_lower": 948882.297801557,
+      "ci_upper": 9144139.897658495,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 1.85,
+      "spend_pct_of_current": 185.0,
+      "incremental_outcome_mean": 4826935.960896526,
+      "ci_lower": 975240.139407157,
+      "ci_upper": 9398143.783704562,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 1.9,
+      "spend_pct_of_current": 190.0,
+      "incremental_outcome_mean": 4957393.689569403,
+      "ci_lower": 1001597.9810127525,
+      "ci_upper": 9652147.669750627,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 1.95,
+      "spend_pct_of_current": 195.0,
+      "incremental_outcome_mean": 5087851.418242284,
+      "ci_lower": 1027955.8226183513,
+      "ci_upper": 9906151.555796701,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "CTV",
+      "spend_multiplier": 2.0,
+      "spend_pct_of_current": 200.0,
+      "incremental_outcome_mean": 5218309.146915164,
+      "ci_lower": 1054313.6642239525,
+      "ci_upper": 10160155.441842768,
+      "ci_level": 0.9
+    }
+  ],
+  "Linear_TV": [
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 0.0,
+      "spend_pct_of_current": 0.0,
+      "incremental_outcome_mean": 0.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 0.05,
+      "spend_pct_of_current": 5.0,
+      "incremental_outcome_mean": 260406.28930247846,
+      "ci_lower": 90524.53039588786,
+      "ci_upper": 438837.1459180186,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 0.1,
+      "spend_pct_of_current": 10.0,
+      "incremental_outcome_mean": 520812.57860494376,
+      "ci_lower": 181049.06079176156,
+      "ci_upper": 877674.2918360246,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 0.15,
+      "spend_pct_of_current": 15.0,
+      "incremental_outcome_mean": 781218.8679074104,
+      "ci_lower": 271573.5911876386,
+      "ci_upper": 1316511.4377540308,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 0.2,
+      "spend_pct_of_current": 20.0,
+      "incremental_outcome_mean": 1041625.1572098774,
+      "ci_lower": 362098.12158351555,
+      "ci_upper": 1755348.5836720385,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 0.25,
+      "spend_pct_of_current": 25.0,
+      "incremental_outcome_mean": 1302031.4465123422,
+      "ci_lower": 452622.6519793896,
+      "ci_upper": 2194185.7295900425,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 0.3,
+      "spend_pct_of_current": 30.0,
+      "incremental_outcome_mean": 1562437.735814809,
+      "ci_lower": 543147.1823752646,
+      "ci_upper": 2633022.8755080514,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 0.35,
+      "spend_pct_of_current": 35.0,
+      "incremental_outcome_mean": 1822844.0251172755,
+      "ci_lower": 633671.7127711403,
+      "ci_upper": 3071860.02142606,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 0.4,
+      "spend_pct_of_current": 40.0,
+      "incremental_outcome_mean": 2083250.3144197408,
+      "ci_lower": 724196.2431670141,
+      "ci_upper": 3510697.167344064,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 0.45,
+      "spend_pct_of_current": 45.0,
+      "incremental_outcome_mean": 2343656.603722207,
+      "ci_lower": 814720.7735628915,
+      "ci_upper": 3949534.3132620677,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 0.5,
+      "spend_pct_of_current": 50.0,
+      "incremental_outcome_mean": 2604062.8930246737,
+      "ci_lower": 905245.3039587655,
+      "ci_upper": 4388371.4591800785,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 0.55,
+      "spend_pct_of_current": 55.00000000000001,
+      "incremental_outcome_mean": 2864469.18232714,
+      "ci_lower": 995769.8343546414,
+      "ci_upper": 4827208.605098085,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 0.6,
+      "spend_pct_of_current": 60.0,
+      "incremental_outcome_mean": 3124875.4716296047,
+      "ci_lower": 1086294.3647505161,
+      "ci_upper": 5266045.751016088,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 0.65,
+      "spend_pct_of_current": 65.0,
+      "incremental_outcome_mean": 3385281.7609320716,
+      "ci_lower": 1176818.8951463916,
+      "ci_upper": 5704882.896934096,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 0.7,
+      "spend_pct_of_current": 70.0,
+      "incremental_outcome_mean": 3645688.0502345352,
+      "ci_lower": 1267343.4255422663,
+      "ci_upper": 6143720.042852098,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 0.75,
+      "spend_pct_of_current": 75.0,
+      "incremental_outcome_mean": 3906094.339537002,
+      "ci_lower": 1357867.9559381418,
+      "ci_upper": 6582557.188770106,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 0.8,
+      "spend_pct_of_current": 80.0,
+      "incremental_outcome_mean": 4166500.628839469,
+      "ci_lower": 1448392.4863340184,
+      "ci_upper": 7021394.334688114,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 0.85,
+      "spend_pct_of_current": 85.0,
+      "incremental_outcome_mean": 4426906.918141936,
+      "ci_lower": 1538917.0167298932,
+      "ci_upper": 7460231.480606121,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 0.9,
+      "spend_pct_of_current": 90.0,
+      "incremental_outcome_mean": 4687313.207444402,
+      "ci_lower": 1629441.547125769,
+      "ci_upper": 7899068.626524127,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 0.95,
+      "spend_pct_of_current": 95.0,
+      "incremental_outcome_mean": 4947719.496746867,
+      "ci_lower": 1719966.0775216431,
+      "ci_upper": 8337905.772442131,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 1.0,
+      "spend_pct_of_current": 100.0,
+      "incremental_outcome_mean": 5208125.786049333,
+      "ci_lower": 1810490.60791752,
+      "ci_upper": 8776742.91836014,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 1.05,
+      "spend_pct_of_current": 105.0,
+      "incremental_outcome_mean": 5468532.075351801,
+      "ci_lower": 1901015.1383133957,
+      "ci_upper": 9215580.064278148,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 1.1,
+      "spend_pct_of_current": 110.00000000000001,
+      "incremental_outcome_mean": 5728938.364654265,
+      "ci_lower": 1991539.6687092693,
+      "ci_upper": 9654417.210196152,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 1.15,
+      "spend_pct_of_current": 114.99999999999999,
+      "incremental_outcome_mean": 5989344.653956731,
+      "ci_lower": 2082064.1991051435,
+      "ci_upper": 10093254.35611416,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 1.2,
+      "spend_pct_of_current": 120.0,
+      "incremental_outcome_mean": 6249750.943259197,
+      "ci_lower": 2172588.7295010216,
+      "ci_upper": 10532091.502032164,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 1.25,
+      "spend_pct_of_current": 125.0,
+      "incremental_outcome_mean": 6510157.232561663,
+      "ci_lower": 2263113.259896896,
+      "ci_upper": 10970928.64795017,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 1.3,
+      "spend_pct_of_current": 130.0,
+      "incremental_outcome_mean": 6770563.52186413,
+      "ci_lower": 2353637.7902927697,
+      "ci_upper": 11409765.793868179,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 1.35,
+      "spend_pct_of_current": 135.0,
+      "incremental_outcome_mean": 7030969.811166596,
+      "ci_lower": 2444162.320688647,
+      "ci_upper": 11848602.939786185,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 1.4,
+      "spend_pct_of_current": 140.0,
+      "incremental_outcome_mean": 7291376.10046906,
+      "ci_lower": 2534686.8510845215,
+      "ci_upper": 12287440.085704189,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 1.45,
+      "spend_pct_of_current": 145.0,
+      "incremental_outcome_mean": 7551782.389771529,
+      "ci_lower": 2625211.381480397,
+      "ci_upper": 12726277.231622199,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 1.5,
+      "spend_pct_of_current": 150.0,
+      "incremental_outcome_mean": 7812188.679073994,
+      "ci_lower": 2715735.911876273,
+      "ci_upper": 13165114.377540207,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 1.55,
+      "spend_pct_of_current": 155.0,
+      "incremental_outcome_mean": 8072594.9683764605,
+      "ci_lower": 2806260.442272148,
+      "ci_upper": 13603951.52345821,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 1.6,
+      "spend_pct_of_current": 160.0,
+      "incremental_outcome_mean": 8333001.257678927,
+      "ci_lower": 2896784.972668024,
+      "ci_upper": 14042788.669376219,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 1.65,
+      "spend_pct_of_current": 165.0,
+      "incremental_outcome_mean": 8593407.546981392,
+      "ci_lower": 2987309.5030639013,
+      "ci_upper": 14481625.815294223,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 1.7,
+      "spend_pct_of_current": 170.0,
+      "incremental_outcome_mean": 8853813.836283857,
+      "ci_lower": 3077834.0334597747,
+      "ci_upper": 14920462.961212229,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 1.75,
+      "spend_pct_of_current": 175.0,
+      "incremental_outcome_mean": 9114220.125586325,
+      "ci_lower": 3168358.56385565,
+      "ci_upper": 15359300.107130237,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 1.8,
+      "spend_pct_of_current": 180.0,
+      "incremental_outcome_mean": 9374626.414888792,
+      "ci_lower": 3258883.0942515256,
+      "ci_upper": 15798137.253048241,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 1.85,
+      "spend_pct_of_current": 185.0,
+      "incremental_outcome_mean": 9635032.704191258,
+      "ci_lower": 3349407.6246474,
+      "ci_upper": 16236974.398966253,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 1.9,
+      "spend_pct_of_current": 190.0,
+      "incremental_outcome_mean": 9895438.993493723,
+      "ci_lower": 3439932.1550432756,
+      "ci_upper": 16675811.544884255,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 1.95,
+      "spend_pct_of_current": 195.0,
+      "incremental_outcome_mean": 10155845.28279619,
+      "ci_lower": 3530456.685439152,
+      "ci_upper": 17114648.69080226,
+      "ci_level": 0.9
+    },
+    {
+      "channel": "Linear_TV",
+      "spend_multiplier": 2.0,
+      "spend_pct_of_current": 200.0,
+      "incremental_outcome_mean": 10416251.572098656,
+      "ci_lower": 3620981.215835026,
+      "ci_upper": 17553485.836720265,
+      "ci_level": 0.9
+    }
+  ]
+}

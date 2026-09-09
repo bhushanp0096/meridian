@@ -1,0 +1,82 @@
+{
+  "stage": "Stage 2 \u2014 Data Contracts (Schemas) Verification",
+  "timestamp_utc": "2026-09-09T10:54:09.780056+00:00",
+  "overall_status": "PASS",
+  "n_pass": 12,
+  "n_fail": 0,
+  "tests": [
+    {
+      "test": "schemas.strict_typing",
+      "status": "PASS",
+      "detail": "Verified 18 models, 0 untyped/Any fields",
+      "duration_seconds": 0.0
+    },
+    {
+      "test": "schemas.ModelSpecResponse",
+      "status": "PASS",
+      "detail": "Validated 5 media + 2 RF channels",
+      "duration_seconds": 0.0
+    },
+    {
+      "test": "schemas.ModelInfoResponse",
+      "status": "PASS",
+      "detail": "Loaded=True, 6 geos",
+      "duration_seconds": 19.391
+    },
+    {
+      "test": "schemas.RoiSummaryItem",
+      "status": "PASS",
+      "detail": "Validated 7 channel ROI items",
+      "duration_seconds": 3.571
+    },
+    {
+      "test": "schemas.ChannelContribution",
+      "status": "PASS",
+      "detail": "Validated 8 contribution items",
+      "duration_seconds": 1.561
+    },
+    {
+      "test": "schemas.ResponseCurvePoint",
+      "status": "PASS",
+      "detail": "Single curve: 41 pts; All curves: 7 channels",
+      "duration_seconds": 8.878
+    },
+    {
+      "test": "schemas.BaselineVsMediaPoint",
+      "status": "PASS",
+      "detail": "Validated 104 time periods",
+      "duration_seconds": 0.458
+    },
+    {
+      "test": "schemas.PredictiveAccuracyResponse",
+      "status": "PASS",
+      "detail": "r_squared=None, mape=None",
+      "duration_seconds": 0.805
+    },
+    {
+      "test": "schemas.ChannelSpendSummary",
+      "status": "PASS",
+      "detail": "Validated 7 channel spend items",
+      "duration_seconds": 0.09
+    },
+    {
+      "test": "schemas.ScenarioRequest",
+      "status": "PASS",
+      "detail": "Validated default, custom parameters, and bound constraints",
+      "duration_seconds": 0.0
+    },
+    {
+      "test": "schemas.WhatIfContracts",
+      "status": "PASS",
+      "detail": "Validated WhatIfRequest and WhatIfResponse schema contracts",
+      "duration_seconds": 0.0
+    },
+    {
+      "test": "schemas.OptimizationResponse",
+      "status": "PASS",
+      "detail": "Validated full OptimizationResponse contract with per-channel uncertainty",
+      "duration_seconds": 0.0
+    }
+  ],
+  "completed_utc": "2026-09-09T10:54:44.535984+00:00"
+}

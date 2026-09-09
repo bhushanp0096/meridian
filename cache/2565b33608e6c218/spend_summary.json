@@ -1,0 +1,30 @@
+[
+  {
+    "channel": "Online_Video",
+    "total_spend": 371901.21
+  },
+  {
+    "channel": "Display",
+    "total_spend": 337847.9599999999
+  },
+  {
+    "channel": "Paid_Social",
+    "total_spend": 547985.3499999999
+  },
+  {
+    "channel": "Paid_Search",
+    "total_spend": 779856.6300000001
+  },
+  {
+    "channel": "Affiliate",
+    "total_spend": 53110.17000000001
+  },
+  {
+    "channel": "CTV",
+    "total_spend": 1442512.4
+  },
+  {
+    "channel": "Linear_TV",
+    "total_spend": 652183.12
+  }
+]
