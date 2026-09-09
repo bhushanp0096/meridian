@@ -21,10 +21,23 @@ def render_kpi_cards(
     """
     total_spend = sum(item.get("total_spend", 0.0) for item in spend_summary)
     
+    # Dynamically exclude non-paid / organic channels
+    organic_channels = set(model_spec.get("organic_media_channel_names", []))
+    taxonomy = model_spec.get("channel_taxonomy", {})
+    def is_paid(c: dict[str, Any]) -> bool:
+        ch = c.get("channel", "")
+        if c.get("is_organic"):
+            return False
+        if ch in organic_channels:
+            return False
+        if taxonomy.get(ch, {}).get("execution_metric") == "organic":
+            return False
+        return True
+
     # Calculate overall weighted media ROI or total incremental outcome
-    total_outcome = sum(c.get("mean", 0.0) for c in contributions if c.get("channel") != "Email_Opens")
-    total_outcome_lo = sum(c.get("ci_lower", 0.0) for c in contributions if c.get("channel") != "Email_Opens")
-    total_outcome_hi = sum(c.get("ci_upper", 0.0) for c in contributions if c.get("channel") != "Email_Opens")
+    total_outcome = sum(c.get("mean", 0.0) for c in contributions if is_paid(c))
+    total_outcome_lo = sum(c.get("ci_lower", 0.0) for c in contributions if is_paid(c))
+    total_outcome_hi = sum(c.get("ci_upper", 0.0) for c in contributions if is_paid(c))
 
     overall_roi = (total_outcome / total_spend) if total_spend > 0 else 0.0
     overall_roi_lo = (total_outcome_lo / total_spend) if total_spend > 0 else 0.0

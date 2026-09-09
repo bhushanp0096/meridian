@@ -403,6 +403,14 @@ def post_whatif(request: schemas.WhatIfRequest) -> schemas.WhatIfResponse:
     # Read response curves for fast, accurate response estimation
     all_curves = cache.get_cached_response_curves() or analysis.get_response_curves_all_channels()
 
+    # Read channel taxonomy for metric and cost unit awareness
+    spec = {}
+    try:
+        spec = load_model_spec()
+    except Exception:
+        pass
+    taxonomy = spec.get("channel_taxonomy", {})
+
     channel_results: list[schemas.WhatIfChannelResult] = []
     total_baseline_spend = 0.0
     total_scenario_spend = 0.0
@@ -412,7 +420,18 @@ def post_whatif(request: schemas.WhatIfRequest) -> schemas.WhatIfResponse:
 
     for ch, base_spend in spend_map.items():
         adj = request.channel_adjustments.get(ch)
-        cpm_mult = adj.cpm_multiplier if adj else 1.0
+        if adj and adj.cost_multiplier is not None:
+            cost_mult = adj.cost_multiplier
+        elif adj and adj.cpm_multiplier is not None:
+            cost_mult = adj.cpm_multiplier
+        else:
+            cost_mult = 1.0
+        cpm_mult = cost_mult
+
+        tax = taxonomy.get(ch, {})
+        metric = tax.get("execution_metric", "spend")
+        unit = tax.get("cost_unit", "Spend")
+        category = tax.get("category")
 
         if adj and adj.spend is not None:
             scen_spend = adj.spend
@@ -424,9 +443,8 @@ def post_whatif(request: schemas.WhatIfRequest) -> schemas.WhatIfResponse:
         delta = scen_spend - base_spend
         delta_pct = (delta / base_spend * 100.0) if base_spend > 0 else 0.0
 
-        # Estimate outcome from response curve adjusted for CPM
-        # Effective spend scale accounts for CPM multiplier
-        effective_mult = (scen_spend / base_spend) / cpm_mult if (base_spend > 0 and cpm_mult > 0) else 1.0
+        # Estimate outcome from response curve adjusted for cost multiplier (CPM/CPC/CPR)
+        effective_mult = (scen_spend / base_spend) / cost_mult if (base_spend > 0 and cost_mult > 0) else 1.0
 
         curve = all_curves.get(ch, [])
         if curve:
@@ -452,6 +470,10 @@ def post_whatif(request: schemas.WhatIfRequest) -> schemas.WhatIfResponse:
                 spend_delta=round(delta, 2),
                 spend_delta_pct=round(delta_pct, 2),
                 cpm_multiplier=cpm_mult,
+                cost_multiplier=cost_mult,
+                execution_metric=metric,
+                cost_unit=unit,
+                category=category,
                 expected_outcome_mean=round(out_mean, 2),
                 ci_lower=round(out_lo, 2),
                 ci_upper=round(out_hi, 2),

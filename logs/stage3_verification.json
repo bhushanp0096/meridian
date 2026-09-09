@@ -1,6 +1,6 @@
 {
   "stage": "Stage 3 \u2014 Precompute and Cache Layer Verification",
-  "timestamp_utc": "2026-09-09T11:06:40.304168+00:00",
+  "timestamp_utc": "2026-09-09T12:29:39.020149+00:00",
   "overall_status": "PASS",
   "n_pass": 12,
   "n_fail": 0,
@@ -9,7 +9,7 @@
       "test": "precompute.run_pipeline",
       "status": "PASS",
       "detail": "Cache ready for model hash 2565b33608e6c218 (status: skipped)",
-      "duration_seconds": 0.0085
+      "duration_seconds": 0.0087
     },
     {
       "test": "cache.readiness_and_manifest",
@@ -20,7 +20,7 @@
     {
       "test": "cache.read.contributions",
       "status": "PASS",
-      "detail": "Read & validated in 0.10ms (SLA: <300ms)",
+      "detail": "Read & validated in 0.14ms (SLA: <300ms)",
       "duration_seconds": 0.0001
     },
     {
@@ -32,51 +32,51 @@
     {
       "test": "cache.read.response_curves_all",
       "status": "PASS",
-      "detail": "Read & validated in 0.92ms (SLA: <300ms)",
-      "duration_seconds": 0.0009
+      "detail": "Read & validated in 0.80ms (SLA: <300ms)",
+      "duration_seconds": 0.0008
     },
     {
       "test": "cache.read.baseline_vs_media",
       "status": "PASS",
-      "detail": "Read & validated in 0.48ms (SLA: <300ms)",
-      "duration_seconds": 0.0005
+      "detail": "Read & validated in 0.41ms (SLA: <300ms)",
+      "duration_seconds": 0.0004
     },
     {
       "test": "cache.read.accuracy",
       "status": "PASS",
-      "detail": "Read & validated in 0.25ms (SLA: <300ms)",
-      "duration_seconds": 0.0002
+      "detail": "Read & validated in 0.09ms (SLA: <300ms)",
+      "duration_seconds": 0.0001
     },
     {
       "test": "cache.read.spend_summary",
       "status": "PASS",
-      "detail": "Read & validated in 0.14ms (SLA: <300ms)",
+      "detail": "Read & validated in 0.08ms (SLA: <300ms)",
       "duration_seconds": 0.0001
     },
     {
       "test": "cache.read.default_optimization",
       "status": "PASS",
-      "detail": "Read & validated in 0.29ms (SLA: <300ms)",
-      "duration_seconds": 0.0003
+      "detail": "Read & validated in 0.12ms (SLA: <300ms)",
+      "duration_seconds": 0.0001
     },
     {
       "test": "cache.total_cold_dashboard_load",
       "status": "PASS",
-      "detail": "Complete dashboard payload loaded in 1.43ms (target < 300ms)",
-      "duration_seconds": 0.0014
+      "detail": "Complete dashboard payload loaded in 1.24ms (target < 300ms)",
+      "duration_seconds": 0.0012
     },
     {
       "test": "cache.scenario_caching",
       "status": "PASS",
       "detail": "Successfully stored and retrieved scenario key bb9c14c20206578d",
-      "duration_seconds": 0.0004
+      "duration_seconds": 0.0003
     },
     {
       "test": "cache.hash_isolation_and_invalidation",
       "status": "PASS",
       "detail": "Verified hash-based namespace segregation and clean invalidation",
-      "duration_seconds": 0.0009
+      "duration_seconds": 0.001
     }
   ],
-  "completed_utc": "2026-09-09T11:06:40.319415+00:00"
+  "completed_utc": "2026-09-09T12:29:39.034208+00:00"
 }

@@ -13,7 +13,10 @@
     "pct_of_contribution": 0.1229029820855231,
     "spend_mean": null,
     "cpik_mean": 553.5901479542242,
-    "ci_level": 0.9
+    "ci_level": 0.9,
+    "execution_metric": "impressions",
+    "cost_unit": "CPM",
+    "category": "Digital Video & Display"
   },
   {
     "channel": "Display",
@@ -29,7 +32,10 @@
     "pct_of_contribution": 4.913989180042008,
     "spend_mean": null,
     "cpik_mean": 37.348839209410144,
-    "ci_level": 0.9
+    "ci_level": 0.9,
+    "execution_metric": "impressions",
+    "cost_unit": "CPM",
+    "category": "Digital Video & Display"
   },
   {
     "channel": "Paid_Social",
@@ -45,7 +51,10 @@
     "pct_of_contribution": 6.368454962366869,
     "spend_mean": null,
     "cpik_mean": 8.721779489672096,
-    "ci_level": 0.9
+    "ci_level": 0.9,
+    "execution_metric": "impressions",
+    "cost_unit": "CPM",
+    "category": "Digital Video & Display"
   },
   {
     "channel": "Paid_Search",
@@ -61,7 +70,10 @@
     "pct_of_contribution": 11.870591006579012,
     "spend_mean": null,
     "cpik_mean": 109.83123344503298,
-    "ci_level": 0.9
+    "ci_level": 0.9,
+    "execution_metric": "clicks",
+    "cost_unit": "CPC",
+    "category": "Performance & Intent"
   },
   {
     "channel": "Affiliate",
@@ -77,7 +89,10 @@
     "pct_of_contribution": 13.177565273819773,
     "spend_mean": null,
     "cpik_mean": 0.3727783459798284,
-    "ci_level": 0.9
+    "ci_level": 0.9,
+    "execution_metric": "clicks",
+    "cost_unit": "CPC",
+    "category": "Performance & Intent"
   },
   {
     "channel": "CTV",
@@ -93,7 +108,10 @@
     "pct_of_contribution": 0.5213651418930658,
     "spend_mean": null,
     "cpik_mean": 496.37738046010577,
-    "ci_level": 0.9
+    "ci_level": 0.9,
+    "execution_metric": "reach_and_frequency",
+    "cost_unit": "CPR",
+    "category": "Television & Streaming"
   },
   {
     "channel": "Linear_TV",
@@ -109,6 +127,9 @@
     "pct_of_contribution": 1.2602520480434394,
     "spend_mean": null,
     "cpik_mean": 63.775547814686064,
-    "ci_level": 0.9
+    "ci_level": 0.9,
+    "execution_metric": "reach_and_frequency",
+    "cost_unit": "CPR",
+    "category": "Television & Streaming"
   }
 ]

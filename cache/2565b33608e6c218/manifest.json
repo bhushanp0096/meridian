@@ -1,6 +1,6 @@
 {
   "model_hash": "2565b33608e6c218",
-  "model_file": "Meridian_files/model_build/meridian_model.binpb",
+  "model_file": "/home/bhush/genai/recco/causal_mmm/Meridian_files/meridian_application/meridian-app/model_weights/meridian_model.binpb",
   "status": "cached",
-  "verified_utc": "2026-09-09T11:06:40.312404+00:00"
+  "verified_utc": "2026-09-09T12:42:41.772506+00:00"
 }

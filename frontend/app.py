@@ -94,17 +94,35 @@ def render_whatif_simulator(client: MeridianApiClient, spends: list[dict], curve
     kpi_name = spec.get("kpi_name", "Bookings")
     kpi_units = spec.get("kpi_units", "units")
 
+    taxonomy = spec.get("channel_taxonomy", {})
+
     with st.expander("🛠️ Configure Scenario Adjustments", expanded=True):
         scen_name = st.text_input("Scenario Label:", value="Q4 Planned Shift", key="whatif_scen_name")
-        st.caption("Adjust spend multiplier (e.g., 1.2 = +20%) or CPM cost multiplier (e.g., 1.5 = +50% cost):")
+        st.caption("Adjust spend multiplier (e.g., 1.2 = +20%) or cost-per-unit multiplier (CPM/CPC/CPR):")
 
         adjustments = {}
         cols = st.columns(min(len(channels), 4))
         for i, ch in enumerate(channels):
             with cols[i % len(cols)]:
+                tax = taxonomy.get(ch, {})
+                metric = tax.get("execution_metric", "spend")
+                cost_unit = tax.get("cost_unit") or "Cost"
+                if metric == "clicks":
+                    cost_label = "CPC Multiplier"
+                    badge_str = f"Clicks · {cost_unit}"
+                elif metric == "reach_and_frequency":
+                    cost_label = "CPR Multiplier"
+                    badge_str = f"R&F · {cost_unit}"
+                elif metric == "impressions":
+                    cost_label = "CPM Multiplier"
+                    badge_str = f"Impr · {cost_unit}"
+                else:
+                    cost_label = "Cost Multiplier"
+                    badge_str = f"Spend · {cost_unit}"
+
                 st.markdown(f"**{ch}**")
                 base = spend_map.get(ch, 0.0)
-                st.caption(f"Base: ₹{base:,.0f}")
+                st.caption(f"Base: ₹{base:,.0f} [{badge_str}]")
                 s_mult = st.slider(
                     f"Spend Multiplier",
                     min_value=0.2,
@@ -114,7 +132,7 @@ def render_whatif_simulator(client: MeridianApiClient, spends: list[dict], curve
                     key=f"whatif_smult_{ch}",
                 )
                 c_mult = st.slider(
-                    f"CPM Multiplier",
+                    cost_label,
                     min_value=0.5,
                     max_value=2.5,
                     value=1.0,
@@ -124,6 +142,7 @@ def render_whatif_simulator(client: MeridianApiClient, spends: list[dict], curve
                 adjustments[ch] = {
                     "spend_multiplier": s_mult,
                     "cpm_multiplier": c_mult,
+                    "cost_multiplier": c_mult,
                 }
 
         run_sim = st.button("Simulate Scenario", type="primary", key="whatif_run_btn")
@@ -191,16 +210,21 @@ def render_whatif_simulator(client: MeridianApiClient, spends: list[dict], curve
         if ch_items:
             tbl = []
             for r in ch_items:
+                ch = r["channel"]
+                tax = taxonomy.get(ch, {})
+                unit = r.get("cost_unit") or tax.get("cost_unit") or "Cost"
+                mult_val = r.get("cost_multiplier") or r.get("cpm_multiplier", 1.0)
                 tbl.append({
-                    "Channel": r["channel"],
+                    "Channel": ch,
+                    "Category": tax.get("category", "General"),
                     "Baseline Spend": f"₹{r['baseline_spend']:,.0f}",
                     "Scenario Spend": f"₹{r['scenario_spend']:,.0f}",
                     "Spend Delta": f"{r['spend_delta_pct']:+.1f}%",
-                    "CPM Multiplier": f"{r['cpm_multiplier']:.1f}x",
+                    f"{unit} Shift": f"{mult_val:.1f}x",
                     f"Projected {kpi_name}": f"{r['expected_outcome_mean']:,.0f}",
                     "90% Credible Interval": f"[{r['ci_lower']:,.0f} – {r['ci_upper']:,.0f}]",
                 })
-            st.dataframe(pd.DataFrame(tbl), use_container_width=True, hide_index=True)
+            st.dataframe(pd.DataFrame(tbl), width="stretch", hide_index=True)
 
 
 def main():

@@ -9,7 +9,7 @@ from typing import Any
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
-from frontend.styles import CHANNEL_COLORS, PLOTLY_LAYOUT_DEFAULTS
+from frontend.styles import CHANNEL_COLORS, PLOTLY_LAYOUT_DEFAULTS, get_channel_color
 
 
 def render_budget_planner(
@@ -110,32 +110,48 @@ def render_budget_planner(
                 key="budget_upper_slider",
             )
 
-        # Advanced per-channel constraints
-        with st.expander("Advanced: Override Specific Channel Bounds"):
-            st.caption("Optionally override min/max absolute spend for individual channels.")
+        # Advanced per-channel constraints grouped by category
+        taxonomy = model_spec.get("channel_taxonomy", {})
+        categories = model_spec.get("categories", [])
+
+        with st.expander("Advanced: Override Specific Channel Bounds (Grouped by Category)"):
+            st.caption("Optionally override min/max absolute spend for individual channels. RF channels solve frequency jointly.")
             channel_overrides = {}
-            col_ov = st.columns(len(channels))
-            for i, ch in enumerate(channels):
-                with col_ov[i % len(col_ov)]:
-                    base = hist_spend_map[ch]
-                    apply_ov = st.checkbox(f"Constrain {ch}", key=f"ov_chk_{ch}")
-                    if apply_ov:
-                        c_min = st.number_input(
-                            f"Min ₹ ({ch})",
-                            value=float(round(base * (1 - lower_bound_pct / 100.0))),
-                            key=f"min_{ch}",
-                        )
-                        c_max = st.number_input(
-                            f"Max ₹ ({ch})",
-                            value=float(round(base * (1 + upper_bound_pct / 100.0))),
-                            key=f"max_{ch}",
-                        )
-                        channel_overrides[ch] = (c_min, c_max)
+
+            # Group channels by category
+            cat_map: dict[str, list[str]] = {}
+            for ch in channels:
+                cat = taxonomy.get(ch, {}).get("category", "General")
+                cat_map.setdefault(cat, []).append(ch)
+
+            for cat, ch_list in cat_map.items():
+                st.markdown(f"**{cat}**")
+                cols = st.columns(len(ch_list))
+                for idx, ch in enumerate(ch_list):
+                    with cols[idx]:
+                        base = hist_spend_map[ch]
+                        tax = taxonomy.get(ch, {})
+                        rf_tag = " (R&F)" if tax.get("has_optimal_frequency") else ""
+                        apply_ov = st.checkbox(f"Constrain {ch}{rf_tag}", key=f"ov_chk_{ch}")
+                        if tax.get("has_optimal_frequency"):
+                            st.caption("🎯 Frequency optimized")
+                        if apply_ov:
+                            c_min = st.number_input(
+                                f"Min ₹ ({ch})",
+                                value=float(round(base * (1 - lower_bound_pct / 100.0))),
+                                key=f"min_{ch}",
+                            )
+                            c_max = st.number_input(
+                                f"Max ₹ ({ch})",
+                                value=float(round(base * (1 + upper_bound_pct / 100.0))),
+                                key=f"max_{ch}",
+                            )
+                            channel_overrides[ch] = (c_min, c_max)
 
     # Optimize Action Button
     col_btn, col_info = st.columns([1, 4])
     with col_btn:
-        run_optimization = st.button("🚀 Run Optimization", type="primary", use_container_width=True)
+        run_optimization = st.button("🚀 Run Optimization", type="primary", width="stretch")
 
     with col_info:
         st.caption("Queries the Meridian serving backend. If using default constraints, returns instantaneously from cache.")
@@ -287,7 +303,7 @@ def render_budget_planner(
         )
         fig_spend.update_yaxes(gridcolor="rgba(255,255,255,0.08)")
         fig_spend.update_xaxes(tickangle=-15)
-        st.plotly_chart(fig_spend, use_container_width=True)
+        st.plotly_chart(fig_spend, width="stretch")
 
     with opt_tab2:
         # Expected lift per channel with credible intervals
@@ -333,12 +349,13 @@ def render_budget_planner(
         )
         fig_lift.update_yaxes(gridcolor="rgba(255,255,255,0.08)")
         fig_lift.update_xaxes(tickangle=-15)
-        st.plotly_chart(fig_lift, use_container_width=True)
+        st.plotly_chart(fig_lift, width="stretch")
 
     with opt_tab3:
         table_rows = []
         for _, row in df_res.iterrows():
             ch = row["channel"]
+            tax = taxonomy.get(ch, {})
             c_sp = row.get("current_spend", 0.0) or 0.0
             o_sp = row.get("optimized_spend", 0.0) or 0.0
             sp_del = row.get("spend_delta", 0.0) or 0.0
@@ -353,6 +370,8 @@ def render_budget_planner(
 
             table_rows.append({
                 "Channel": ch,
+                "Category": tax.get("category", "General"),
+                "Execution Metric": tax.get("execution_metric", "standard").replace("_", " ").title(),
                 "Current Spend (₹)": f"₹{c_sp:,.0f}",
                 "Optimized Spend (₹)": f"₹{o_sp:,.0f}",
                 "Shift (₹)": f"{'+' if sp_del >= 0 else ''}₹{sp_del:,.0f}",
@@ -363,7 +382,7 @@ def render_budget_planner(
             })
 
         tbl_df = pd.DataFrame(table_rows)
-        st.dataframe(tbl_df, use_container_width=True, hide_index=True)
+        st.dataframe(tbl_df, width="stretch", hide_index=True)
         csv_data = df_res.to_csv(index=False)
         st.download_button(
             label="📥 Export Optimized Allocation (CSV)",

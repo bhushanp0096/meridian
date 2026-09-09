@@ -122,6 +122,14 @@ def get_roi_summary(ci_level: float = 0.9, use_kpi: bool = False) -> list[dict]:
     # distribution = ['prior', 'posterior']
     channels = [str(c) for c in sm.coords["channel"].values if str(c) != "All Channels"]
 
+    spec = {}
+    try:
+        from utils.common import load_model_spec  # noqa: PLC0415
+        spec = load_model_spec()
+    except Exception:
+        pass
+    taxonomy = spec.get("channel_taxonomy", {})
+
     result = []
     for ch in channels:
         def _get(var, metric, dist="posterior"):
@@ -131,6 +139,7 @@ def get_roi_summary(ci_level: float = 0.9, use_kpi: bool = False) -> list[dict]:
             except Exception:
                 return None
 
+        tax = taxonomy.get(ch, {})
         entry = {
             "channel": ch,
             "roi_mean": _get("roi", "mean"),
@@ -146,6 +155,9 @@ def get_roi_summary(ci_level: float = 0.9, use_kpi: bool = False) -> list[dict]:
             "spend_mean": _get("spend", "mean"),
             "cpik_mean": _get("cpik", "mean"),
             "ci_level": ci_level,
+            "execution_metric": tax.get("execution_metric"),
+            "cost_unit": tax.get("cost_unit"),
+            "category": tax.get("category"),
         }
         result.append(entry)
 
@@ -163,7 +175,8 @@ def get_channel_contributions(
     using summary_metrics().
 
     Each dict has keys:
-      channel, mean, ci_lower, ci_upper, ci_level, pct_of_total_mean
+      channel, mean, ci_lower, ci_upper, ci_level, pct_of_total_mean,
+      is_organic, execution_metric, category
 
     Parameters
     ----------
@@ -188,6 +201,15 @@ def get_channel_contributions(
 
     channels = [str(c) for c in sm.coords["channel"].values if str(c) != "All Channels"]
 
+    spec = {}
+    try:
+        from utils.common import load_model_spec  # noqa: PLC0415
+        spec = load_model_spec()
+    except Exception:
+        pass
+    taxonomy = spec.get("channel_taxonomy", {})
+    organic_names = set(spec.get("organic_media_channel_names", []))
+
     result = []
     for ch in channels:
         def _get(var, metric, dist="posterior", _ch=ch):
@@ -198,6 +220,8 @@ def get_channel_contributions(
                 return None
 
         mean_val = _get("incremental_outcome", "mean")
+        tax = taxonomy.get(ch, {})
+        is_organic = (ch in organic_names) or (tax.get("execution_metric") == "organic")
         entry = {
             "channel": ch,
             "mean": mean_val,
@@ -205,6 +229,9 @@ def get_channel_contributions(
             "ci_upper": _get("incremental_outcome", "ci_hi"),
             "pct_of_total_mean": _get("pct_of_contribution", "mean"),
             "ci_level": ci_level,
+            "is_organic": is_organic,
+            "execution_metric": tax.get("execution_metric", "organic" if is_organic else None),
+            "category": tax.get("category"),
         }
         result.append(entry)
 

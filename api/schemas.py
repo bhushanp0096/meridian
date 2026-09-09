@@ -35,6 +35,15 @@ class StrictBaseModel(BaseModel):
 # Model Spec & System Health Contracts
 # ---------------------------------------------------------------------------
 
+class ChannelTaxonomyItem(StrictBaseModel):
+    """Taxonomy and execution metadata for a channel."""
+    execution_metric: str = Field(..., description="Execution metric type (e.g. impressions, clicks, reach_and_frequency, organic, spend)")
+    cost_unit: str | None = Field(default=None, description="Cost unit (CPM, CPC, CPR, Spend)")
+    category: str = Field(..., description="Business category grouping")
+    color: str = Field(..., description="Hex color token")
+    has_optimal_frequency: bool | None = Field(default=None, description="Whether RF frequency optimization applies")
+
+
 class ModelSpecResponse(StrictBaseModel):
     """Schema matching config/model_spec.json."""
     n_geos: int = Field(..., description="Number of geographical units")
@@ -61,6 +70,10 @@ class ModelSpecResponse(StrictBaseModel):
     hill_before_adstock: bool = Field(..., description="Whether Hill curve applied before Adstock")
     media_effects_dist: str = Field(..., description="Distribution used for media effects prior")
     enable_aks: bool = Field(..., description="Whether Auto-Knot Selection was enabled")
+    channel_taxonomy: dict[str, ChannelTaxonomyItem] | None = Field(
+        default=None, description="Per-channel taxonomy: execution metric, cost unit, category, color"
+    )
+    categories: list[str] | None = Field(default=None, description="List of channel category names")
 
 
 class ModelInfoResponse(StrictBaseModel):
@@ -92,6 +105,9 @@ class ChannelContribution(StrictBaseModel):
     ci_upper: float | None = Field(default=None, description="Upper credible bound")
     pct_of_total_mean: float | None = Field(default=None, description="Share of total contribution (percentage)")
     ci_level: float = Field(default=0.9, description="Credible interval width (e.g. 0.90 for 90% CI)")
+    is_organic: bool = Field(default=False, description="Whether channel is non-paid / organic")
+    execution_metric: str | None = Field(default=None, description="Execution metric type")
+    category: str | None = Field(default=None, description="Channel category")
 
 
 class RoiSummaryItem(StrictBaseModel):
@@ -110,6 +126,11 @@ class RoiSummaryItem(StrictBaseModel):
     spend_mean: float | None = Field(default=None, description="Mean historical spend")
     cpik_mean: float | None = Field(default=None, description="Cost per incremental KPI unit")
     ci_level: float = Field(default=0.9, description="Credible interval width")
+    execution_metric: str | None = Field(
+        default=None, description="Execution metric type (reach_and_frequency, clicks, impressions, organic, spend)"
+    )
+    cost_unit: str | None = Field(default=None, description="Cost unit (e.g. CPR, CPC, CPM, Spend)")
+    category: str | None = Field(default=None, description="Channel category")
 
 
 class ResponseCurvePoint(StrictBaseModel):
@@ -285,6 +306,9 @@ class WhatIfChannelAdjustment(StrictBaseModel):
     cpm_multiplier: float = Field(
         default=1.0, description="Cost-per-unit multiplier (e.g. 2.0 = CPM doubles)"
     )
+    cost_multiplier: float | None = Field(
+        default=None, description="Cost-per-unit multiplier (alias for cpm_multiplier across any execution metric)"
+    )
 
 
 class WhatIfRequest(StrictBaseModel):
@@ -307,7 +331,11 @@ class WhatIfChannelResult(StrictBaseModel):
     scenario_spend: float = Field(..., description="Simulated scenario spend")
     spend_delta: float = Field(..., description="Difference in spend")
     spend_delta_pct: float = Field(..., description="Percentage difference in spend")
-    cpm_multiplier: float = Field(default=1.0, description="Cost multiplier applied")
+    cpm_multiplier: float = Field(default=1.0, description="Cost multiplier applied (CPM)")
+    cost_multiplier: float = Field(default=1.0, description="Cost multiplier applied (metric-aware)")
+    execution_metric: str | None = Field(default=None, description="Channel execution metric")
+    cost_unit: str | None = Field(default=None, description="Channel cost unit")
+    category: str | None = Field(default=None, description="Channel category")
     expected_outcome_mean: float = Field(..., description="Expected outcome posterior mean")
     ci_lower: float = Field(..., description="Lower bound of outcome CI")
     ci_upper: float = Field(..., description="Upper bound of outcome CI")

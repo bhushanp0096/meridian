@@ -153,4 +153,4 @@ def render_timeline_view(
     fig.update_yaxes(gridcolor="rgba(255,255,255,0.08)")
     fig.update_xaxes(gridcolor="rgba(255,255,255,0.08)")
 
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")

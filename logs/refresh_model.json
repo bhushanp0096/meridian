@@ -1,9 +1,34 @@
 {
-  "stage": "Stage 0 \u2014 Spec Extraction",
-  "timestamp_utc": "2026-09-09T12:31:03.791745+00:00",
+  "timestamp_utc": "2026-09-09T12:42:41.650354+00:00",
   "model_path": "/home/bhush/genai/recco/causal_mmm/Meridian_files/meridian_application/meridian-app/model_weights/meridian_model.binpb",
-  "spec_path": "/home/bhush/genai/recco/causal_mmm/Meridian_files/meridian_application/meridian-app/config/model_spec.json",
-  "status": "PASS",
+  "model_sha256": "2565b33608e6c2187c14df3bc8a25312921c12ae2c08e6461e1a6819f88bdaa2",
+  "diff": {
+    "added_channels": [],
+    "removed_channels": [],
+    "retained_channels": [
+      "Affiliate",
+      "CTV",
+      "Display",
+      "Email_Opens",
+      "Linear_TV",
+      "Online_Video",
+      "Paid_Search",
+      "Paid_Social"
+    ],
+    "metric_changes": {},
+    "date_range": {
+      "old": "2024-01-01 \u2192 2025-12-22",
+      "new": "2024-01-01 \u2192 2025-12-22"
+    },
+    "time_periods": {
+      "old": 104,
+      "new": 104
+    },
+    "geos": {
+      "old": 6,
+      "new": 6
+    }
+  },
   "spec": {
     "n_geos": 6,
     "geo_names": [
@@ -109,6 +134,5 @@
       "Television & Streaming",
       "Retention & CRM"
     ]
-  },
-  "error": null
+  }
 }

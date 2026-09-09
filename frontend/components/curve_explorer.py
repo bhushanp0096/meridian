@@ -9,7 +9,7 @@ from typing import Any
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
-from frontend.styles import CHANNEL_COLORS, PLOTLY_LAYOUT_DEFAULTS
+from frontend.styles import CHANNEL_COLORS, PLOTLY_LAYOUT_DEFAULTS, get_channel_color
 
 
 def render_curve_explorer(
@@ -55,7 +55,19 @@ def render_curve_explorer(
         )
 
         st.markdown("---")
-        # Display channel quick facts
+        # Display channel taxonomy & quick facts
+        tax = model_spec.get("channel_taxonomy", {}).get(selected_channel, {})
+        cat = tax.get("category", "General")
+        metric_label = tax.get("execution_metric", "spend").replace("_", " ").title()
+        cost_unit = tax.get("cost_unit", "")
+
+        st.caption(f"Category: **{cat}**")
+        metric_disp = f"{metric_label} · {cost_unit}" if cost_unit else metric_label
+        st.caption(f"Metric: **{metric_disp}**")
+
+        if tax.get("has_optimal_frequency"):
+            st.info("💡 Optimal frequency solved during budget optimization.")
+
         ch_spend = spend_map.get(selected_channel, 0.0)
         st.metric("Historical Spend", f"₹{ch_spend:,.0f}")
 
@@ -92,7 +104,7 @@ def render_curve_explorer(
     y_lo = df_curve["ci_lower"].tolist()
     y_hi = df_curve["ci_upper"].tolist()
 
-    ch_color = CHANNEL_COLORS.get(selected_channel, "#3B82F6")
+    ch_color = get_channel_color(selected_channel)
     fill_color = f"rgba{tuple(list(int(ch_color.lstrip('#')[i:i+2], 16) for i in (0, 2, 4)) + [0.18])}"
 
     fig = go.Figure()
@@ -180,7 +192,7 @@ def render_curve_explorer(
     fig.update_xaxes(gridcolor="rgba(255,255,255,0.08)")
 
     with col_chart:
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
 
     # Multi-channel saturation overlay tab
     with st.expander("🔍 Compare All Channel Curves on Relative Spend Scale (0% – 200%)"):
@@ -196,7 +208,7 @@ def render_curve_explorer(
                     y=df_ch["incremental_outcome_mean"],
                     mode="lines",
                     name=ch,
-                    line=dict(color=CHANNEL_COLORS.get(ch, "#94A3B8"), width=2),
+                    line=dict(color=get_channel_color(ch), width=2),
                     hovertemplate=f"<b>{ch}</b><br>Spend: %{{x:.0f}}%<br>Outcome: %{{y:,.0f}}<extra></extra>",
                 )
             )
@@ -211,4 +223,4 @@ def render_curve_explorer(
         )
         fig_all.update_yaxes(gridcolor="rgba(255,255,255,0.08)")
         fig_all.update_xaxes(gridcolor="rgba(255,255,255,0.08)")
-        st.plotly_chart(fig_all, use_container_width=True)
+        st.plotly_chart(fig_all, width="stretch")

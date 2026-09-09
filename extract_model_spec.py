@@ -133,7 +133,141 @@ def extract_spec(mmm) -> dict:
     spec["media_effects_dist"] = "log_normal"
     spec["enable_aks"] = True
 
+    # --- Channel Taxonomy & Multi-Metric Classification ---
+    channel_cfg_path = CONFIG_DIR / "channel_config.json"
+    cfg_overrides = {}
+    if channel_cfg_path.exists():
+        try:
+            cfg_overrides = json.loads(channel_cfg_path.read_text())
+        except Exception:
+            pass
+
+    channel_taxonomy, categories = build_channel_taxonomy(
+        media_channels=spec["media_channel_names"],
+        rf_channels=spec["rf_channel_names"],
+        organic_channels=spec["organic_media_channel_names"],
+        config_overrides=cfg_overrides,
+    )
+    spec["channel_taxonomy"] = channel_taxonomy
+    spec["categories"] = categories
+
     return spec
+
+
+DEFAULT_PALETTE = [
+    "#4F46E5",  # Indigo
+    "#06B6D4",  # Cyan
+    "#EC4899",  # Pink
+    "#F59E0B",  # Amber
+    "#10B981",  # Emerald
+    "#8B5CF6",  # Purple
+    "#3B82F6",  # Sky Blue
+    "#64748B",  # Slate
+    "#E11D48",  # Rose
+    "#D97706",  # Ochre
+    "#059669",  # Mint
+    "#7C3AED",  # Violet
+]
+
+KNOWN_COLORS = {
+    "Online_Video": "#4F46E5",
+    "Display": "#06B6D4",
+    "Paid_Social": "#EC4899",
+    "Paid_Search": "#F59E0B",
+    "Affiliate": "#10B981",
+    "CTV": "#8B5CF6",
+    "Linear_TV": "#3B82F6",
+    "Email_Opens": "#64748B",
+}
+
+
+def build_channel_taxonomy(
+    media_channels: list[str],
+    rf_channels: list[str],
+    organic_channels: list[str],
+    config_overrides: dict | None = None,
+) -> tuple[dict, list[str]]:
+    """
+    Build multi-metric taxonomy for all media channels.
+    Classifies channels into execution metrics:
+      - reach_and_frequency: CPR
+      - clicks: CPC
+      - impressions: CPM
+      - organic: None
+      - spend: Spend
+    """
+    overrides = config_overrides or {}
+    taxonomy = {}
+    categories = []
+
+    def _add_cat(cat):
+        if cat and cat not in categories:
+            categories.append(cat)
+
+    color_idx = 0
+
+    # 1. Standard media channels
+    for ch in media_channels:
+        ch_ovr = overrides.get(ch, {})
+        color = ch_ovr.get("color") or KNOWN_COLORS.get(ch) or DEFAULT_PALETTE[color_idx % len(DEFAULT_PALETTE)]
+        color_idx += 1
+
+        ch_lower = ch.lower()
+        if any(k in ch_lower for k in ["_click", "click", "search", "affiliate", "cpc", "sem"]):
+            def_metric = "clicks"
+            def_unit = "CPC"
+            def_cat = "Performance & Intent"
+        elif any(k in ch_lower for k in ["_imp", "imp", "video", "display", "social", "cpm", "yt", "fb", "ig", "meta", "tiktok"]):
+            def_metric = "impressions"
+            def_unit = "CPM"
+            def_cat = "Digital Video & Display"
+        else:
+            def_metric = "spend"
+            def_unit = "Spend"
+            def_cat = "Other Media"
+
+        category = ch_ovr.get("category", def_cat)
+        _add_cat(category)
+
+        taxonomy[ch] = {
+            "execution_metric": ch_ovr.get("execution_metric", def_metric),
+            "cost_unit": ch_ovr.get("cost_unit", def_unit),
+            "category": category,
+            "color": color,
+        }
+
+    # 2. RF channels
+    for ch in rf_channels:
+        ch_ovr = overrides.get(ch, {})
+        color = ch_ovr.get("color") or KNOWN_COLORS.get(ch) or DEFAULT_PALETTE[color_idx % len(DEFAULT_PALETTE)]
+        color_idx += 1
+        category = ch_ovr.get("category", "Television & Streaming")
+        _add_cat(category)
+
+        taxonomy[ch] = {
+            "execution_metric": ch_ovr.get("execution_metric", "reach_and_frequency"),
+            "cost_unit": ch_ovr.get("cost_unit", "CPR"),
+            "category": category,
+            "color": color,
+            "has_optimal_frequency": True,
+        }
+
+    # 3. Organic channels
+    for ch in organic_channels:
+        ch_ovr = overrides.get(ch, {})
+        color = ch_ovr.get("color") or KNOWN_COLORS.get(ch) or DEFAULT_PALETTE[color_idx % len(DEFAULT_PALETTE)]
+        color_idx += 1
+        category = ch_ovr.get("category", "Retention & CRM")
+        _add_cat(category)
+
+        taxonomy[ch] = {
+            "execution_metric": ch_ovr.get("execution_metric", "organic"),
+            "cost_unit": ch_ovr.get("cost_unit", None),
+            "category": category,
+            "color": color,
+        }
+
+    return taxonomy, categories
 
 
 def main():

@@ -44,5 +44,63 @@
   "max_lag": 8,
   "hill_before_adstock": false,
   "media_effects_dist": "log_normal",
-  "enable_aks": true
+  "enable_aks": true,
+  "channel_taxonomy": {
+    "Online_Video": {
+      "execution_metric": "impressions",
+      "cost_unit": "CPM",
+      "category": "Digital Video & Display",
+      "color": "#4F46E5"
+    },
+    "Display": {
+      "execution_metric": "impressions",
+      "cost_unit": "CPM",
+      "category": "Digital Video & Display",
+      "color": "#06B6D4"
+    },
+    "Paid_Social": {
+      "execution_metric": "impressions",
+      "cost_unit": "CPM",
+      "category": "Digital Video & Display",
+      "color": "#EC4899"
+    },
+    "Paid_Search": {
+      "execution_metric": "clicks",
+      "cost_unit": "CPC",
+      "category": "Performance & Intent",
+      "color": "#F59E0B"
+    },
+    "Affiliate": {
+      "execution_metric": "clicks",
+      "cost_unit": "CPC",
+      "category": "Performance & Intent",
+      "color": "#10B981"
+    },
+    "CTV": {
+      "execution_metric": "reach_and_frequency",
+      "cost_unit": "CPR",
+      "category": "Television & Streaming",
+      "color": "#8B5CF6",
+      "has_optimal_frequency": true
+    },
+    "Linear_TV": {
+      "execution_metric": "reach_and_frequency",
+      "cost_unit": "CPR",
+      "category": "Television & Streaming",
+      "color": "#3B82F6",
+      "has_optimal_frequency": true
+    },
+    "Email_Opens": {
+      "execution_metric": "organic",
+      "cost_unit": null,
+      "category": "Retention & CRM",
+      "color": "#64748B"
+    }
+  },
+  "categories": [
+    "Digital Video & Display",
+    "Performance & Intent",
+    "Television & Streaming",
+    "Retention & CRM"
+  ]
 }

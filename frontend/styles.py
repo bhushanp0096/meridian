@@ -31,6 +31,43 @@ CHANNEL_COLORS = {
     "Email_Opens": "#64748B",      # Slate (organic)
 }
 
+DEFAULT_CHANNEL_PALETTE = [
+    "#4F46E5",  # Indigo
+    "#06B6D4",  # Cyan
+    "#EC4899",  # Pink
+    "#F59E0B",  # Amber
+    "#10B981",  # Emerald
+    "#8B5CF6",  # Purple
+    "#3B82F6",  # Sky Blue
+    "#64748B",  # Slate
+    "#E11D48",  # Rose
+    "#D97706",  # Ochre
+    "#059669",  # Mint
+    "#7C3AED",  # Violet
+]
+
+
+def get_channel_color(channel: str, fallback_index: int = 0) -> str:
+    """Return consistent, harmonious color for any channel (fixed or discovered)."""
+    if channel in CHANNEL_COLORS:
+        return CHANNEL_COLORS[channel]
+    hash_val = sum(ord(c) for c in channel) + fallback_index
+    return DEFAULT_CHANNEL_PALETTE[hash_val % len(DEFAULT_CHANNEL_PALETTE)]
+
+
+def get_metric_badge_html(metric: str, cost_unit: str | None = None) -> str:
+    """Return styled HTML chip for an execution metric."""
+    metric_map = {
+        "reach_and_frequency": ("badge-rf", f"R&F · {cost_unit or 'CPR'}"),
+        "clicks": ("badge-clicks", f"Clicks · {cost_unit or 'CPC'}"),
+        "impressions": ("badge-impressions", f"Impr · {cost_unit or 'CPM'}"),
+        "organic": ("badge-organic", "Organic"),
+        "spend": ("badge-spend", f"Spend · {cost_unit or 'Spend'}"),
+    }
+    cls, label = metric_map.get(metric, ("badge-info", metric))
+    return f'<span class="badge {cls}">{label}</span>'
+
+
 PLOTLY_LAYOUT_DEFAULTS = dict(
     font=dict(family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif"),
     margin=dict(l=40, r=40, t=50, b=40),
@@ -142,6 +179,36 @@ def apply_custom_css():
             background-color: rgba(239, 68, 68, 0.15);
             color: #EF4444;
             border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+        .badge-rf {
+            background-color: rgba(139, 92, 246, 0.15);
+            color: #A78BFA;
+            border: 1px solid rgba(139, 92, 246, 0.35);
+        }
+        .badge-clicks {
+            background-color: rgba(245, 158, 11, 0.15);
+            color: #FBBF24;
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+        .badge-impressions {
+            background-color: rgba(79, 70, 229, 0.15);
+            color: #818CF8;
+            border: 1px solid rgba(79, 70, 229, 0.35);
+        }
+        .badge-organic {
+            background-color: rgba(100, 116, 139, 0.15);
+            color: #94A3B8;
+            border: 1px solid rgba(100, 116, 139, 0.35);
+        }
+        .badge-spend {
+            background-color: rgba(20, 184, 166, 0.15);
+            color: #2DD4BF;
+            border: 1px solid rgba(20, 184, 166, 0.35);
+        }
+        .badge-category {
+            background-color: rgba(30, 41, 59, 0.7);
+            color: #E2E8F0;
+            border: 1px solid rgba(148, 163, 184, 0.25);
         }
 
         /* Callout notification container */

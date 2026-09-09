@@ -8,7 +8,7 @@ from typing import Any
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
-from frontend.styles import CHANNEL_COLORS, PLOTLY_LAYOUT_DEFAULTS
+from frontend.styles import CHANNEL_COLORS, PLOTLY_LAYOUT_DEFAULTS, get_channel_color
 
 
 def render_channel_performance(
@@ -17,11 +17,11 @@ def render_channel_performance(
     model_spec: dict[str, Any],
 ):
     """
-    Render Channel ROI and Contribution charts with error bars + detailed data table.
+    Render Channel ROI and Contribution charts with error bars, category filters, and taxonomy breakdown.
     """
     st.subheader("📊 Channel Effectiveness & Attribution Overview")
     st.markdown(
-        "Compare media channels by Return on Investment (ROI) and incremental outcome. "
+        "Compare media channels by Return on Investment (ROI) and incremental outcome across execution metrics. "
         "**Error bars represent the 90% posterior credible interval**, reflecting uncertainty in attribution."
     )
 
@@ -29,8 +29,31 @@ def render_channel_performance(
         st.warning("No channel performance data available.")
         return
 
+    taxonomy = model_spec.get("channel_taxonomy", {})
+    categories = model_spec.get("categories", [])
+
+    # Category filter control
+    cat_options = ["All Categories"] + sorted(list(set(categories)))
+    col_f1, col_f2 = st.columns([2, 3])
+    with col_f1:
+        selected_cat = st.selectbox(
+            "Filter Channels by Category:",
+            options=cat_options,
+            index=0,
+            key="perf_category_filter",
+        )
+
+    # Filter dataframes if a category is selected
     df_roi = pd.DataFrame(roi_summary)
     df_contrib = pd.DataFrame(contributions)
+
+    if selected_cat != "All Categories":
+        df_roi = df_roi[df_roi["channel"].apply(lambda ch: taxonomy.get(ch, {}).get("category") == selected_cat)]
+        df_contrib = df_contrib[df_contrib["channel"].apply(lambda ch: taxonomy.get(ch, {}).get("category") == selected_cat)]
+
+    if df_roi.empty:
+        st.info(f"No channels found under category '{selected_cat}'.")
+        return
 
     kpi_name = model_spec.get("kpi_name", "Bookings")
     kpi_units = model_spec.get("kpi_units", "units")
@@ -38,7 +61,7 @@ def render_channel_performance(
     tab1, tab2, tab3 = st.tabs(["📈 ROI & Marginal ROI", "🏆 Incremental Contribution", "📋 Detailed Data Table"])
 
     # -----------------------------------------------------------------------
-    # Tab 1: Channel ROI with Error Bars
+    # Tab 1: Channel ROI with Error Bars & Metric Tags
     # -----------------------------------------------------------------------
     with tab1:
         col_ctrl, col_chart = st.columns([1, 4])
@@ -76,16 +99,30 @@ def render_channel_performance(
         los = plot_df[lo_col].tolist()
         his = plot_df[hi_col].tolist()
 
-        # Asymmetric error bars: array = hi - mean, arrayminus = mean - lo
         error_plus = [max(0.0, h - m) if h is not None and m is not None else 0.0 for h, m in zip(his, means)]
         error_minus = [max(0.0, m - l) if l is not None and m is not None else 0.0 for l, m in zip(los, means)]
+        bar_colors = [get_channel_color(ch) for ch in channels]
 
-        bar_colors = [CHANNEL_COLORS.get(ch, "#3B82F6") for ch in channels]
+        # Channel display labels with metric chips
+        display_names = []
+        custom_data = []
+        for ch, l, h in zip(channels, los, his):
+            tax = taxonomy.get(ch, {})
+            unit = tax.get("cost_unit") or tax.get("execution_metric", "")
+            badge = f" [{unit}]" if unit else ""
+            display_names.append(f"{ch}{badge}")
+            custom_data.append((
+                l,
+                h,
+                tax.get("execution_metric", "standard"),
+                tax.get("category", "General"),
+                tax.get("cost_unit", "—"),
+            ))
 
         fig_roi = go.Figure()
         fig_roi.add_trace(
             go.Bar(
-                x=channels,
+                x=display_names,
                 y=means,
                 error_y=dict(
                     type="data",
@@ -100,16 +137,18 @@ def render_channel_performance(
                 hovertemplate=(
                     "<b>%{x}</b><br>"
                     + f"{show_metric}: %{{y:.2f}}<br>"
-                    + "90% CI: [%{customdata[0]:.2f}, %{customdata[1]:.2f}]<extra></extra>"
+                    + "90% CI: [%{customdata[0]:.2f}, %{customdata[1]:.2f}]<br>"
+                    + "Category: %{customdata[3]}<br>"
+                    + "Metric: %{customdata[2]} (%{customdata[4]})<extra></extra>"
                 ),
-                customdata=list(zip(los, his)),
+                customdata=custom_data,
             )
         )
 
         fig_roi.update_layout(
             **PLOTLY_LAYOUT_DEFAULTS,
             title=dict(text=f"Channel {show_metric} with 90% Credible Intervals", x=0),
-            xaxis_title="Media Channel",
+            xaxis_title="Media Channel [Execution Metric]",
             yaxis_title=f"{show_metric} (Outcome per Unit Spend)",
             height=430,
         )
@@ -117,7 +156,7 @@ def render_channel_performance(
         fig_roi.update_xaxes(tickangle=-15)
 
         with col_chart:
-            st.plotly_chart(fig_roi, use_container_width=True)
+            st.plotly_chart(fig_roi, width="stretch")
 
     # -----------------------------------------------------------------------
     # Tab 2: Channel Contribution Share & Incremental Volume
@@ -140,7 +179,21 @@ def render_channel_performance(
 
         c_err_plus = [max(0.0, h - m) if h is not None and m is not None else 0.0 for h, m in zip(c_his, c_means)]
         c_err_minus = [max(0.0, m - l) if l is not None and m is not None else 0.0 for l, m in zip(c_los, c_means)]
-        c_colors = [CHANNEL_COLORS.get(ch, "#3B82F6") for ch in c_channels]
+        c_colors = [get_channel_color(ch) for ch in c_channels]
+
+        c_display_names = []
+        c_custom_data = []
+        for ch, l, h in zip(c_channels, c_los, c_his):
+            tax = taxonomy.get(ch, {})
+            unit = tax.get("cost_unit") or ("Organic" if tax.get("execution_metric") == "organic" else "")
+            badge = f" [{unit}]" if unit else ""
+            c_display_names.append(f"{ch}{badge}")
+            c_custom_data.append((
+                l,
+                h,
+                tax.get("execution_metric", "standard"),
+                tax.get("category", "General"),
+            ))
 
         fig_contrib = go.Figure()
 
@@ -148,7 +201,7 @@ def render_channel_performance(
             pct_means = c_df["pct_of_total_mean"].tolist()
             fig_contrib.add_trace(
                 go.Bar(
-                    x=c_channels,
+                    x=c_display_names,
                     y=pct_means,
                     marker_color=c_colors,
                     hovertemplate="<b>%{x}</b><br>Share of Total: %{y:.1f}%<extra></extra>",
@@ -164,7 +217,7 @@ def render_channel_performance(
         else:
             fig_contrib.add_trace(
                 go.Bar(
-                    x=c_channels,
+                    x=c_display_names,
                     y=c_means,
                     error_y=dict(
                         type="data",
@@ -179,9 +232,10 @@ def render_channel_performance(
                     hovertemplate=(
                         f"<b>%{{x}}</b><br>"
                         + f"Incremental {kpi_name}: %{{y:,.0f}}<br>"
-                        + "90% CI: [%{customdata[0]:,.0f}, %{customdata[1]:,.0f}]<extra></extra>"
+                        + "90% CI: [%{customdata[0]:,.0f}, %{customdata[1]:,.0f}]<br>"
+                        + "Category: %{customdata[3]}<extra></extra>"
                     ),
-                    customdata=list(zip(c_los, c_his)),
+                    customdata=c_custom_data,
                 )
             )
             fig_contrib.update_layout(
@@ -196,13 +250,12 @@ def render_channel_performance(
         fig_contrib.update_xaxes(tickangle=-15)
 
         with col_c_chart:
-            st.plotly_chart(fig_contrib, use_container_width=True)
+            st.plotly_chart(fig_contrib, width="stretch")
 
     # -----------------------------------------------------------------------
-    # Tab 3: Detailed Data Table
+    # Tab 3: Detailed Multi-Metric Data Table
     # -----------------------------------------------------------------------
     with tab3:
-        # Merge spend, ROI, and contribution for an exhaustive table
         merged = df_roi.copy()
         if "channel" in merged.columns and "channel" in df_contrib.columns:
             merged = merged.merge(
@@ -214,6 +267,7 @@ def render_channel_performance(
         table_rows = []
         for _, row in merged.iterrows():
             ch = row["channel"]
+            tax = taxonomy.get(ch, {})
             spend = row.get("spend_mean", 0.0) or 0.0
             roi_m = row.get("roi_mean", 0.0) or 0.0
             roi_l = row.get("roi_ci_lower", 0.0) or 0.0
@@ -225,17 +279,23 @@ def render_channel_performance(
             cpik = row.get("cpik_mean", 0.0) or 0.0
             pct_share = row.get("pct_of_total_mean", 0.0) or 0.0
 
+            metric_label = tax.get("execution_metric", "standard").replace("_", " ").title()
+            cost_unit = tax.get("cost_unit")
+            unit_cost_str = f"₹{cpik:.1f} ({cost_unit})" if (cpik > 0 and cost_unit) else (f"₹{cpik:.1f}" if cpik > 0 else "—")
+
             table_rows.append({
                 "Channel": ch,
-                "Spend (₹)": f"₹{spend:,.0f}",
-                "ROI (Mean)": f"{roi_m:.2f}x",
-                "ROI 90% CI": f"[{roi_l:.2f} – {roi_h:.2f}]",
-                "mROI (Mean)": f"{mroi_m:.2f}x",
-                "mROI 90% CI": f"[{mroi_l:.2f} – {mroi_h:.2f}]",
+                "Category": tax.get("category", "General"),
+                "Execution Metric": metric_label,
+                "Spend (₹)": f"₹{spend:,.0f}" if spend > 0 else "Organic",
+                "ROI (Mean)": f"{roi_m:.2f}x" if spend > 0 else "—",
+                "ROI 90% CI": f"[{roi_l:.2f} – {roi_h:.2f}]" if spend > 0 else "—",
+                "mROI (Mean)": f"{mroi_m:.2f}x" if spend > 0 else "—",
+                "mROI 90% CI": f"[{mroi_l:.2f} – {mroi_h:.2f}]" if spend > 0 else "—",
                 f"Incremental {kpi_name}": f"{inc_m:,.0f}",
                 "Share (%)": f"{pct_share:.1f}%",
-                "Cost / KPI (₹)": f"₹{cpik:.1f}" if cpik > 0 else "—",
+                "Unit Efficiency": unit_cost_str,
             })
 
         display_df = pd.DataFrame(table_rows)
-        st.dataframe(display_df, use_container_width=True, hide_index=True)
+        st.dataframe(display_df, width="stretch", hide_index=True)

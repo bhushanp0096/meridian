@@ -1,6 +1,6 @@
 {
   "stage": "Stage 2 \u2014 Data Contracts (Schemas) Verification",
-  "timestamp_utc": "2026-09-09T10:54:09.780056+00:00",
+  "timestamp_utc": "2026-09-09T12:32:30.601291+00:00",
   "overall_status": "PASS",
   "n_pass": 12,
   "n_fail": 0,
@@ -8,7 +8,7 @@
     {
       "test": "schemas.strict_typing",
       "status": "PASS",
-      "detail": "Verified 18 models, 0 untyped/Any fields",
+      "detail": "Verified 19 models, 0 untyped/Any fields",
       "duration_seconds": 0.0
     },
     {
@@ -21,43 +21,43 @@
       "test": "schemas.ModelInfoResponse",
       "status": "PASS",
       "detail": "Loaded=True, 6 geos",
-      "duration_seconds": 19.391
+      "duration_seconds": 12.242
     },
     {
       "test": "schemas.RoiSummaryItem",
       "status": "PASS",
       "detail": "Validated 7 channel ROI items",
-      "duration_seconds": 3.571
+      "duration_seconds": 3.722
     },
     {
       "test": "schemas.ChannelContribution",
       "status": "PASS",
       "detail": "Validated 8 contribution items",
-      "duration_seconds": 1.561
+      "duration_seconds": 1.575
     },
     {
       "test": "schemas.ResponseCurvePoint",
       "status": "PASS",
       "detail": "Single curve: 41 pts; All curves: 7 channels",
-      "duration_seconds": 8.878
+      "duration_seconds": 9.75
     },
     {
       "test": "schemas.BaselineVsMediaPoint",
       "status": "PASS",
       "detail": "Validated 104 time periods",
-      "duration_seconds": 0.458
+      "duration_seconds": 0.511
     },
     {
       "test": "schemas.PredictiveAccuracyResponse",
       "status": "PASS",
       "detail": "r_squared=None, mape=None",
-      "duration_seconds": 0.805
+      "duration_seconds": 0.839
     },
     {
       "test": "schemas.ChannelSpendSummary",
       "status": "PASS",
       "detail": "Validated 7 channel spend items",
-      "duration_seconds": 0.09
+      "duration_seconds": 0.099
     },
     {
       "test": "schemas.ScenarioRequest",
@@ -78,5 +78,5 @@
       "duration_seconds": 0.0
     }
   ],
-  "completed_utc": "2026-09-09T10:54:44.535984+00:00"
+  "completed_utc": "2026-09-09T12:32:59.342205+00:00"
 }

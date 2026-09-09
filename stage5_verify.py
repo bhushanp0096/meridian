@@ -292,11 +292,75 @@ def run_tests() -> list[dict[str, Any]]:
         import frontend.app
 
         assert hasattr(frontend.styles, "apply_custom_css")
+        assert hasattr(frontend.styles, "get_channel_color")
         assert hasattr(frontend.api_client, "MeridianApiClient")
         assert hasattr(frontend.app, "main")
         record("frontend.modules_import_integrity", "PASS", "All 8 frontend modules imported and compiled cleanly", time.time() - t0)
     except Exception as exc:
         record("frontend.modules_import_integrity", "FAIL", str(exc), time.time() - t0)
+
+    # 13. Test Channel Taxonomy & Multi-Metric Integrity
+    t0 = time.time()
+    try:
+        spec = client.get_model_spec()
+        taxonomy = spec.get("channel_taxonomy", {})
+        assert len(taxonomy) == 8, f"Expected 8 taxonomy channels, got {len(taxonomy)}"
+
+        # Verify execution metric assignments
+        assert taxonomy["CTV"]["execution_metric"] == "reach_and_frequency"
+        assert taxonomy["CTV"]["cost_unit"] == "CPR"
+        assert taxonomy["CTV"]["has_optimal_frequency"] is True
+        assert taxonomy["Linear_TV"]["execution_metric"] == "reach_and_frequency"
+
+        assert taxonomy["Paid_Search"]["execution_metric"] == "clicks"
+        assert taxonomy["Paid_Search"]["cost_unit"] == "CPC"
+        assert taxonomy["Affiliate"]["execution_metric"] == "clicks"
+
+        assert taxonomy["Online_Video"]["execution_metric"] == "impressions"
+        assert taxonomy["Online_Video"]["cost_unit"] == "CPM"
+
+        assert taxonomy["Email_Opens"]["execution_metric"] == "organic"
+        assert taxonomy["Email_Opens"]["cost_unit"] is None
+
+        # Verify ROI summary enriched with taxonomy
+        roi_items = client.get_roi_summary()
+        for r in roi_items:
+            assert "execution_metric" in r, f"Missing execution_metric in roi item: {r}"
+            assert "cost_unit" in r, f"Missing cost_unit in roi item: {r}"
+
+        # Verify Contributions enriched with is_organic
+        contrib_items = client.get_contributions()
+        for c in contrib_items:
+            assert "is_organic" in c, f"Missing is_organic in contribution: {c}"
+            if c["channel"] == "Email_Opens":
+                assert c["is_organic"] is True
+
+        record("taxonomy.multi_metric_integrity", "PASS", "Taxonomy verified across RF, Clicks, Impressions, and Organic", time.time() - t0)
+    except Exception as exc:
+        record("taxonomy.multi_metric_integrity", "FAIL", str(exc), time.time() - t0)
+
+    # 14. Test Metric-Aware What-If Projections
+    t0 = time.time()
+    try:
+        whatif_req = {
+            "scenario_name": "Unit-Aware Simulation",
+            "channel_adjustments": {
+                "Online_Video": {"spend_multiplier": 1.2, "cost_multiplier": 1.15},
+                "Paid_Search": {"spend_multiplier": 0.9, "cost_multiplier": 1.05},
+                "CTV": {"spend_multiplier": 1.1, "cost_multiplier": 1.0},
+            },
+            "use_kpi": False,
+            "ci_level": 0.9,
+        }
+        res = client.post_whatif(whatif_req)
+        assert res.get("status") == "ok"
+        ch_map = {c["channel"]: c for c in res.get("channels", [])}
+        assert ch_map["Paid_Search"]["cost_unit"] == "CPC"
+        assert ch_map["Online_Video"]["cost_unit"] == "CPM"
+        assert ch_map["CTV"]["cost_unit"] == "CPR"
+        record("whatif.metric_aware_simulation", "PASS", "Cost multipliers dynamically resolved across CPM/CPC/CPR", time.time() - t0)
+    except Exception as exc:
+        record("whatif.metric_aware_simulation", "FAIL", str(exc), time.time() - t0)
 
     return results
 
