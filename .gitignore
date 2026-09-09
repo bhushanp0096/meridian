@@ -41,3 +41,9 @@ env/
 # Environment variables
 .env
 .env.local
+
+# Model binary artifacts (large files)
+*.binpb
+*.nc
+!model_weights/.gitkeep
+!model/.gitkeep

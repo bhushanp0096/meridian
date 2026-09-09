@@ -334,3 +334,74 @@ Build `services/loader.py`, `services/analysis.py`, `services/optimizer.py` — 
 
 ---
 *Auto-maintained by AI Agent | Stage 4 completed: 2026-09-09*
+
+---
+
+## Stage 5 Run Log — Frontend MVP (Streamlit Only)
+
+**Stage**: 5 — Frontend MVP (Streamlit Only)  
+**Status**: ✅ PASSED (12/12 tests)  
+**Run date**: 2026-09-09  
+**Application Entry**: `frontend/app.py`  
+**Stack**: Streamlit 1.63.0 + Plotly 7.0.0 (Python only)
+
+### Test & Component Verification Results
+
+| Test / Component | Status | Detail | Latency |
+|---|---|---|---|
+| `client.metadata_and_spec` | ✅ PASS | Health check, 6 geos, 7 paid channels verified | 438.2 ms |
+| `analysis.roi_summary_ci_integrity` | ✅ PASS | 7 channels verified; `roi_ci_lower <= roi_mean <= roi_ci_upper` invariant held | 30.4 ms |
+| `analysis.contributions_ci_integrity` | ✅ PASS | 8 channels (incl organic) verified with strict credible interval bounds | 22.8 ms |
+| `analysis.response_curves_ci_integrity` | ✅ PASS | 7 channels × 41 curve points verified with valid uncertainty ribbons | 32.8 ms |
+| `analysis.timeline_decomposition` | ✅ PASS | 104 weekly points; baseline and media decomposition bounds verified | 25.8 ms |
+| `analysis.spend_summary` | ✅ PASS | 7 channels; Total historical spend = ₹4,185,397 | 11.3 ms |
+| `optimizer.post_optimize_execution` | ✅ PASS | Budget allocation solved; lift credible intervals & confidence flags verified | 12.4 ms |
+| `optimizer.post_whatif_execution` | ✅ PASS | Simulated 7 channels; Projected outcome: 152.5M [72.1M – 237.9M] | 14.6 ms |
+| `plotly.roi_error_bars_generation` | ✅ PASS | Verified asymmetric error bars trace compiled for all channels | 64.1 ms |
+| `plotly.response_curve_ribbon_generation` | ✅ PASS | Verified shaded uncertainty ribbon (`tonexty`) and current spend marker | 17.3 ms |
+| `plotly.timeline_decomposition_generation` | ✅ PASS | Verified time-series baseline vs. media traces compiled | 13.1 ms |
+| `frontend.modules_import_integrity` | ✅ PASS | All 8 frontend modules imported and compiled cleanly with zero errors | < 1 ms |
+
+### Key Architecture & UX Implementation Details
+
+1. **Strict Posterior Uncertainty Semantics (Task 3)**:
+   - Every single chart rendering posterior metrics displays credible intervals:
+     - Channel ROI & mROI: Asymmetric error bars (`roi_ci_lower` to `roi_ci_upper`).
+     - Channel Contribution: Asymmetric error bars on incremental bookings.
+     - Saturation Curves: Semi-transparent shaded ribbon (`ci_lower` to `ci_upper`) with historical spend ($1.0\times$) diamond marker.
+     - Timeline Decomposition: Weekly baseline and media uncertainty bands across all 104 weeks.
+     - Budget Planner: Net lift and per-channel lift error bars.
+2. **Dual-Mode API Client**:
+   - `MeridianApiClient` automatically attempts connection to the external FastAPI server (`http://127.0.0.1:8000`), and transparently falls back to an in-process `fastapi.testclient.TestClient(app)` if the external process is offline, guaranteeing seamless execution.
+   - Streamlit caching via `@st.cache_data(ttl=300)` ensures sub-10ms page transitions.
+3. **Interactive Budget Optimizer**:
+   - Offers Fixed Budget (target spend) and Flexible Budget (target ROI/mROI) allocation modes.
+   - Sliders for lower/upper spend deviation constraints ($\pm 5\%$ to $\pm 100\%$) with per-channel override capabilities.
+   - Grouped before-and-after spend comparison chart and expected lift chart.
+   - Confidence-gating alerts flag channels where the lift CI crosses zero.
+   - One-click CSV export of optimized budget allocations.
+4. **What-If Scenario Simulator**:
+   - Custom spend multipliers and CPM cost-per-unit inflation multipliers per channel.
+   - Instant response interpolation from precomputed saturation profiles.
+5. **Modern Mix Studio Styling**:
+   - Custom CSS styling (`frontend/styles.py`) with metric cards, typography, status badges, and cohesive channel color palettes.
+
+### Deliverables
+
+| File | Status | Description |
+|---|---|---|
+| `frontend/styles.py` | ✅ Created | Theme tokens, typography, channel palettes, and custom CSS |
+| `frontend/api_client.py` | ✅ Created & Verified | HTTP client with automatic fallback and data transformation |
+| `frontend/components/kpi_cards.py` | ✅ Created & Verified | Executive summary KPI metric cards |
+| `frontend/components/channel_performance.py` | ✅ Created & Verified | ROI and Contribution charts with 90% CI error bars + data table |
+| `frontend/components/curve_explorer.py` | ✅ Created & Verified | Saturation curves with shaded uncertainty bands and markers |
+| `frontend/components/budget_planner.py` | ✅ Created & Verified | Budget planner with spend sliders, constraints, and lift charts |
+| `frontend/components/timeline_view.py` | ✅ Created & Verified | 104-week baseline vs. media decomposition with error bands |
+| `frontend/components/__init__.py` | ✅ Created | Component module package |
+| `frontend/app.py` | ✅ Created & Verified | Main Streamlit dashboard application |
+| `stage5_verify.py` | ✅ Created & Verified | Automated end-to-end verification suite (12/12 passed) |
+| `logs/stage5_verification.json` | ✅ Written | Structured test results log |
+| `requirements-serving.txt` | ✅ Updated | Added `streamlit==1.63.0`, `plotly==7.0.0` |
+
+---
+*Auto-maintained by AI Agent | Stage 5 completed: 2026-09-09*

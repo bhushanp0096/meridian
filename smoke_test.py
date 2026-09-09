@@ -25,12 +25,17 @@ from pathlib import Path
 os.environ["CUDA_VISIBLE_DEVICES"] = ""
 os.environ["JAX_PLATFORMS"] = "cpu"
 
-# ---------------------------------------------------------------------------
-# Paths — resolved relative to workspace root (or BUILD_WORKSPACE_DIRECTORY)
-# ---------------------------------------------------------------------------
+APP_DIR = Path(__file__).resolve().parent
 WORKSPACE = Path(os.environ.get("BUILD_WORKSPACE_DIRECTORY", "."))
-MODEL_PATH = WORKSPACE / "Meridian_files" / "model_build" / "meridian_model.binpb"
-LOG_DIR = Path(__file__).parent / "logs"
+candidates = [
+    APP_DIR / "model_weights" / "meridian_model.binpb",
+    APP_DIR / "model_weights" / "saved_mmm.binpb",
+    APP_DIR / "model" / "meridian_model.binpb",
+    APP_DIR / "model" / "saved_mmm.binpb",
+    WORKSPACE / "Meridian_files" / "model_build" / "meridian_model.binpb",
+]
+MODEL_PATH = next((p for p in candidates if p.exists()), candidates[0])
+LOG_DIR = APP_DIR / "logs"
 LOG_PATH = LOG_DIR / "stage0_smoke_test.json"
 
 LOG_DIR.mkdir(parents=True, exist_ok=True)

@@ -27,9 +27,16 @@ os.environ["JAX_PLATFORMS"] = "cpu"
 # ---------------------------------------------------------------------------
 # Paths
 # ---------------------------------------------------------------------------
+APP_DIR = Path(__file__).resolve().parent
 WORKSPACE = Path(os.environ.get("BUILD_WORKSPACE_DIRECTORY", "."))
-MODEL_PATH = WORKSPACE / "Meridian_files" / "model_build" / "meridian_model.binpb"
-APP_DIR = Path(__file__).parent
+candidates = [
+    APP_DIR / "model_weights" / "meridian_model.binpb",
+    APP_DIR / "model_weights" / "saved_mmm.binpb",
+    APP_DIR / "model" / "meridian_model.binpb",
+    APP_DIR / "model" / "saved_mmm.binpb",
+    WORKSPACE / "Meridian_files" / "model_build" / "meridian_model.binpb",
+]
+MODEL_PATH = next((p for p in candidates if p.exists()), candidates[0])
 CONFIG_DIR = APP_DIR / "config"
 LOG_DIR = APP_DIR / "logs"
 

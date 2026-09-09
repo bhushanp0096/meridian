@@ -25,15 +25,28 @@ from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
-# ---------------------------------------------------------------------------
-# Resolve model path
-# ---------------------------------------------------------------------------
-_WORKSPACE = Path(os.environ.get("BUILD_WORKSPACE_DIRECTORY", "."))
-_DEFAULT_MODEL_PATH = _WORKSPACE / "Meridian_files" / "model_build" / "meridian_model.binpb"
+def _resolve_model_path() -> Path:
+    """Resolve model path from environment or relative to app location."""
+    if "MERIDIAN_MODEL_PATH" in os.environ:
+        return Path(os.environ["MERIDIAN_MODEL_PATH"])
 
-MODEL_PATH: Path = Path(
-    os.environ.get("MERIDIAN_MODEL_PATH", str(_DEFAULT_MODEL_PATH))
-)
+    app_dir = Path(__file__).resolve().parent.parent
+    candidates = [
+        app_dir / "model_weights" / "meridian_model.binpb",
+        app_dir / "model_weights" / "saved_mmm.binpb",
+        app_dir / "model" / "meridian_model.binpb",
+        app_dir / "model" / "saved_mmm.binpb",
+        app_dir.parents[1] / "model_build" / "meridian_model.binpb",
+        Path(os.environ.get("BUILD_WORKSPACE_DIRECTORY", ".")) / "Meridian_files" / "model_build" / "meridian_model.binpb",
+    ]
+    for candidate in candidates:
+        if candidate.exists():
+            return candidate.resolve()
+
+    return candidates[0]
+
+
+MODEL_PATH: Path = _resolve_model_path()
 
 # ---------------------------------------------------------------------------
 # Singleton state

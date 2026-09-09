@@ -1,7 +1,7 @@
 {
   "stage": "Stage 0 \u2014 Smoke Test",
-  "timestamp_utc": "2026-09-09T09:15:50.707561+00:00",
-  "model_path": "Meridian_files/model_build/meridian_model.binpb",
+  "timestamp_utc": "2026-09-09T11:59:47.401381+00:00",
+  "model_path": "/home/bhush/genai/recco/causal_mmm/Meridian_files/meridian_application/meridian-app/model_weights/meridian_model.binpb",
   "model_exists": true,
   "model_size_bytes": 2401510,
   "status": "PASS",
