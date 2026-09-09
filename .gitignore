@@ -43,7 +43,9 @@ env/
 .env.local
 
 # Model binary artifacts (large files)
-*.binpb
 *.nc
+!model_weights/*.binpb
+!model/*.binpb
 !model_weights/.gitkeep
 !model/.gitkeep
+
